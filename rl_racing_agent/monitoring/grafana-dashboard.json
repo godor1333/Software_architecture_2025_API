@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "annotations": {"list": []},
   "editable": true,
@@ -57,4 +58,65 @@
   ],
   "schemaVersion": 39,
   "title": "RL Racing Agent"
+=======
+{
+  "annotations": {"list": []},
+  "editable": true,
+  "panels": [
+    {
+      "type": "timeseries",
+      "title": "Reward per step",
+      "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+      "targets": [
+        {
+          "rawSql": "SELECT timestamp AS time, reward FROM telemetry ORDER BY timestamp",
+          "format": "time_series",
+          "refId": "A"
+        }
+      ],
+      "datasource": {"type": "postgres", "uid": "postgres-racing"}
+    },
+    {
+      "type": "timeseries",
+      "title": "Speed over time",
+      "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+      "targets": [
+        {
+          "rawSql": "SELECT timestamp AS time, speed FROM telemetry ORDER BY timestamp",
+          "format": "time_series",
+          "refId": "A"
+        }
+      ],
+      "datasource": {"type": "postgres", "uid": "postgres-racing"}
+    },
+    {
+      "type": "stat",
+      "title": "Crash rate",
+      "gridPos": {"h": 6, "w": 6, "x": 0, "y": 8},
+      "targets": [
+        {
+          "rawSql": "SELECT AVG(CASE WHEN crashed THEN 1 ELSE 0 END) AS crash_rate FROM telemetry",
+          "format": "table",
+          "refId": "A"
+        }
+      ],
+      "datasource": {"type": "postgres", "uid": "postgres-racing"}
+    },
+    {
+      "type": "timeseries",
+      "title": "Progress per episode",
+      "gridPos": {"h": 6, "w": 18, "x": 6, "y": 8},
+      "targets": [
+        {
+          "rawSql": "SELECT timestamp AS time, MAX(progress) AS progress FROM telemetry GROUP BY episode, timestamp ORDER BY timestamp",
+          "format": "time_series",
+          "refId": "A"
+        }
+      ],
+      "datasource": {"type": "postgres", "uid": "postgres-racing"}
+    }
+  ],
+  "schemaVersion": 39,
+  "title": "RL Racing Agent"
+>>>>>>> 0037982a52b70d8ed1ac0df57ec0f7ee8fcf872b
 }
