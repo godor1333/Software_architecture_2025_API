@@ -1,0 +1,37 @@
+{
+  "dataset_name": "ASHRAE Great Energy Predictor III (Smart Campus Synthetic)",
+  "total_hours": 8760,
+  "train_hours": 7000,
+  "test_hours": 1760,
+  "target_unit": "kWh",
+  "residual_stats": {
+    "mean": 0.13,
+    "std": 13.27,
+    "anomaly_threshold_3sigma_kwh": 39.8
+  },
+  "feature_importances": {
+    "hour": 0.0181,
+    "sin_hour": 0.0109,
+    "cos_hour": 0.2309,
+    "day_of_week": 0.0774,
+    "is_weekend": 0.1564,
+    "temp_c": 0.0155,
+    "temp_effect": 0.0113,
+    "humidity_pct": 0.0002,
+    "lag_1h": 0.3427,
+    "lag_24h": 0.135,
+    "rolling_mean_6h": 0.0016
+  },
+  "baseline_persistence_24h": {
+    "rmse": 100.53,
+    "mae": 62.03,
+    "r2": 0.4878,
+    "mape_pct": 15.09
+  },
+  "xgboost_model": {
+    "rmse": 13.27,
+    "mae": 10.52,
+    "r2": 0.9911,
+    "mape_pct": 2.63
+  }
+}
