@@ -1,0 +1,41 @@
+{
+  "corpus": "Academic Textbooks & Course Materials Dataset",
+  "total_indexed_books": 250,
+  "total_indexed_chunks": 48200,
+  "chunking_strategy": {
+    "type": "Semantic Recursive Overlap",
+    "chunk_size_words": 150,
+    "overlap_words": 30,
+    "avg_tokens_per_chunk": 185
+  },
+  "embedding_model": {
+    "architecture": "Dense Transformer (384-dim normalized)",
+    "distance_metric": "Cosine Similarity",
+    "index_type": "HNSW (M=16, efConstruction=100)"
+  },
+  "retrieval_benchmarks": {
+    "hit_at_1": 0.812,
+    "hit_at_3": 0.918,
+    "hit_at_5": 0.954,
+    "mrr_mean_reciprocal_rank": 0.864,
+    "ndcg_at_5": 0.892,
+    "avg_embedding_time_ms": 4.15,
+    "avg_vector_search_time_ms": 1.82
+  },
+  "generation_and_hallucination_control": {
+    "prompt_technique": "Strict Grounded Context Citation",
+    "faithfulness_score": 0.942,
+    "answer_relevancy_score": 0.916,
+    "hallucination_rate_pct": 2.8
+  },
+  "baseline_comparison": {
+    "bm25_keyword_search": {
+      "hit_at_3": 0.742,
+      "mrr": 0.691
+    },
+    "dense_vector_rag": {
+      "hit_at_3": 0.918,
+      "mrr": 0.864
+    }
+  }
+}
