@@ -3,10 +3,10 @@
 
 # Software Architecture 2025 — проекты студентов
 
-[![progress](https://img.shields.io/badge/progress-1%2F40%20(2%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
+[![progress](https://img.shields.io/badge/progress-2%2F40%20(5%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
 
 🌐 **Сайт с проектами:** https://godor1333.github.io/Software_architecture_2025_API/  
-🕒 Обновлено: 24.10.2026 14:48 (МСК)
+🕒 Обновлено: 25.10.2026 17:16 (МСК)
 
 Курс «Архитектура программного обеспечения», 2025. Здесь собираются проекты студентов:
 у каждого участника 5 проектов, у каждого проекта — своя папка с заданием (`TASK.md`).
@@ -23,8 +23,8 @@
 | [Даша Фролова](#даша-фролова) | 1/5 | `██░░░░░░░░` 20% |
 | [Денис Сивогривов](#денис-сивогривов) | 0/5 | `░░░░░░░░░░` 0% |
 | [Артём Царьков](#артём-царьков) | 0/5 | `░░░░░░░░░░` 0% |
-| [Денис Куравин](#денис-куравин) | 0/5 | `░░░░░░░░░░` 0% |
-| **Всего** | **1/40** | `░░░░░░░░░░` 2% |
+| [Денис Куравин](#денис-куравин) | 1/5 | `██░░░░░░░░` 20% |
+| **Всего** | **2/40** | `░░░░░░░░░░` 5% |
 
 ## Проекты
 
@@ -100,9 +100,9 @@
 
 ### Денис Куравин
 
-Папка: [`projects/Kuravin_Denis/`](projects/Kuravin_Denis) · сдано **0/5**
+Папка: [`projects/Kuravin_Denis/`](projects/Kuravin_Denis) · сдано **1/5**
 
-- [ ] **1. Антифрод рекламного трафика** — [📁 папка](projects/Kuravin_Denis/1_antifrod-reklamnogo-trafika)
+- [x] **1. Антифрод рекламного трафика** — [📁 папка](projects/Kuravin_Denis/1_antifrod-reklamnogo-trafika) · [PR #4](https://github.com/godor1333/Software_architecture_2025_API/pull/4) · @Deniel-b · принят 25.10.2026
 - [ ] **2. Детекция дефектов на фотографиях автомобилей** — [📁 папка](projects/Kuravin_Denis/2_detektsiya-defektov-na-fotografiyakh)
 - [ ] **3. RAG-поиск по книгам и учебным материалам** — [📁 папка](projects/Kuravin_Denis/3_rag-poisk-po-knigam-i-uchebnym)
 - [ ] **4. Анализ тональности финансовых новостей** — [📁 папка](projects/Kuravin_Denis/4_analiz-tonalnosti-finansovykh-novostey)
