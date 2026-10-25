@@ -1,0 +1,48 @@
+{
+  "dataset_size": 20000,
+  "train_size": 15000,
+  "test_size": 5000,
+  "fraud_ratio": 0.1488,
+  "feature_names": [
+    "clicks_1min",
+    "clicks_5min",
+    "click_interval_ms",
+    "fast_click_flag",
+    "ua_bot_score",
+    "is_datacenter_ip",
+    "device_mismatch",
+    "night_hours",
+    "hour"
+  ],
+  "feature_importances": {
+    "clicks_1min": 0.11862160265445709,
+    "clicks_5min": 0.45292922854423523,
+    "click_interval_ms": 0.05302582308650017,
+    "fast_click_flag": 0.046885471791028976,
+    "ua_bot_score": 0.049271419644355774,
+    "is_datacenter_ip": 0.21389256417751312,
+    "device_mismatch": 0.029028646647930145,
+    "night_hours": 0.009007272310554981,
+    "hour": 0.027337975800037384
+  },
+  "baseline_logistic_regression": {
+    "roc_auc": 0.959,
+    "pr_auc": 0.9098,
+    "f1": 0.8485,
+    "precision": 0.9657,
+    "recall": 0.7567
+  },
+  "xgboost_model": {
+    "roc_auc": 0.9877,
+    "pr_auc": 0.9559,
+    "f1": 0.8809,
+    "precision": 0.8869,
+    "recall": 0.875,
+    "confusion_matrix": {
+      "tn": 4173,
+      "fp": 83,
+      "fn": 93,
+      "tp": 651
+    }
+  }
+}
