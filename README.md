@@ -3,10 +3,10 @@
 
 # Software Architecture 2025 — проекты студентов
 
-[![progress](https://img.shields.io/badge/progress-0%2F40%20(0%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
+[![progress](https://img.shields.io/badge/progress-5%2F40%20(12%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
 
 🌐 **Сайт с проектами:** https://godor1333.github.io/Software_architecture_2025_API/  
-🕒 Обновлено: 19.10.2026 19:50 (МСК)
+🕒 Обновлено: 25.10.2026 17:17 (МСК)
 
 Курс «Архитектура программного обеспечения», 2025. Здесь собираются проекты студентов:
 у каждого участника 5 проектов, у каждого проекта — своя папка с заданием (`TASK.md`).
@@ -20,11 +20,11 @@
 | [Никита Шарунин](#никита-шарунин) | 0/5 | `░░░░░░░░░░` 0% |
 | [Дима Леонов](#дима-леонов) | 0/5 | `░░░░░░░░░░` 0% |
 | [Лиля Тютерева](#лиля-тютерева) | 0/5 | `░░░░░░░░░░` 0% |
-| [Даша Фролова](#даша-фролова) | 0/5 | `░░░░░░░░░░` 0% |
+| [Даша Фролова](#даша-фролова) | 1/5 | `██░░░░░░░░` 20% |
 | [Денис Сивогривов](#денис-сивогривов) | 0/5 | `░░░░░░░░░░` 0% |
 | [Артём Царьков](#артём-царьков) | 0/5 | `░░░░░░░░░░` 0% |
-| [Денис Куравин](#денис-куравин) | 0/5 | `░░░░░░░░░░` 0% |
-| **Всего** | **0/40** | `░░░░░░░░░░` 0% |
+| [Денис Куравин](#денис-куравин) | 4/5 | `████████░░` 80% |
+| **Всего** | **5/40** | `█░░░░░░░░░` 12% |
 
 ## Проекты
 
@@ -70,9 +70,9 @@
 
 ### Даша Фролова
 
-Папка: [`projects/Frolova_Dasha/`](projects/Frolova_Dasha) · сдано **0/5**
+Папка: [`projects/Frolova_Dasha/`](projects/Frolova_Dasha) · сдано **1/5**
 
-- [ ] **1. Антифрод билетов на концерты** — [📁 папка](projects/Frolova_Dasha/1_antifrod-biletov-na-kontserty)
+- [x] **1. Антифрод билетов на концерты** — [📁 папка](projects/Frolova_Dasha/1_antifrod-biletov-na-kontserty) · [PR #1](https://github.com/godor1333/Software_architecture_2025_API/pull/1) · @daralova · принят 24.10.2026
 - [ ] **2. Сегментация дорожной сцены для беспилотника** — [📁 папка](projects/Frolova_Dasha/2_segmentatsiya-dorozhnoy-stseny-dlya)
 - [ ] **3. Анализ отзывов пациентов о клиниках** — [📁 папка](projects/Frolova_Dasha/3_analiz-otzyvov-patsientov-o-klinikakh)
 - [ ] **4. Мультимодальный модератор изображений форумов** — [📁 папка](projects/Frolova_Dasha/4_multimodalnyy-moderator-izobrazheniy)
@@ -100,12 +100,12 @@
 
 ### Денис Куравин
 
-Папка: [`projects/Kuravin_Denis/`](projects/Kuravin_Denis) · сдано **0/5**
+Папка: [`projects/Kuravin_Denis/`](projects/Kuravin_Denis) · сдано **4/5**
 
-- [ ] **1. Антифрод рекламного трафика** — [📁 папка](projects/Kuravin_Denis/1_antifrod-reklamnogo-trafika)
-- [ ] **2. Детекция дефектов на фотографиях автомобилей** — [📁 папка](projects/Kuravin_Denis/2_detektsiya-defektov-na-fotografiyakh)
-- [ ] **3. RAG-поиск по книгам и учебным материалам** — [📁 папка](projects/Kuravin_Denis/3_rag-poisk-po-knigam-i-uchebnym)
-- [ ] **4. Анализ тональности финансовых новостей** — [📁 папка](projects/Kuravin_Denis/4_analiz-tonalnosti-finansovykh-novostey)
+- [x] **1. Антифрод рекламного трафика** — [📁 папка](projects/Kuravin_Denis/1_antifrod-reklamnogo-trafika) · [PR #4](https://github.com/godor1333/Software_architecture_2025_API/pull/4) · @Deniel-b · принят 25.10.2026
+- [x] **2. Детекция дефектов на фотографиях автомобилей** — [📁 папка](projects/Kuravin_Denis/2_detektsiya-defektov-na-fotografiyakh) · [PR #5](https://github.com/godor1333/Software_architecture_2025_API/pull/5) · @Deniel-b · принят 25.10.2026
+- [x] **3. RAG-поиск по книгам и учебным материалам** — [📁 папка](projects/Kuravin_Denis/3_rag-poisk-po-knigam-i-uchebnym) · [PR #6](https://github.com/godor1333/Software_architecture_2025_API/pull/6) · @Deniel-b · принят 25.10.2026
+- [x] **4. Анализ тональности финансовых новостей** — [📁 папка](projects/Kuravin_Denis/4_analiz-tonalnosti-finansovykh-novostey) · [PR #7](https://github.com/godor1333/Software_architecture_2025_API/pull/7) · @Deniel-b · принят 25.10.2026
 - [ ] **5. Прогнозирование энергопотребления здания** — [📁 папка](projects/Kuravin_Denis/5_prognozirovanie-energopotrebleniya)
 
 ## Как сдать проект

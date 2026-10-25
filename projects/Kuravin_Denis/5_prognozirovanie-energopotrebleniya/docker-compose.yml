@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  energy-api:
+    build: .
+    container_name: energy-api
+    ports:
+      - "8004:8004"
+    environment:
+      - ENVIRONMENT=production
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:9092
+      - CLICKHOUSE_HOST=clickhouse
+      - CLICKHOUSE_PORT=8123
+    depends_on:
+      - kafka
+      - clickhouse
+    networks:
+      - energy-net
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.4.0
+    container_name: energy-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - energy-net
+
+  kafka:
+    image: confluentinc/cp-kafka:7.4.0
+    container_name: energy-kafka
+    ports:
+      - "9096:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:9096
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    depends_on:
+      - zookeeper
+    networks:
+      - energy-net
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:23.8
+    container_name: energy-clickhouse
+    ports:
+      - "8126:8123"
+    environment:
+      CLICKHOUSE_DB: energy_telemetry
+    networks:
+      - energy-net
+
+  grafana:
+    image: grafana/grafana:10.2.0
+    container_name: energy-grafana
+    ports:
+      - "3003:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - clickhouse
+    networks:
+      - energy-net
+
+networks:
+  energy-net:
+    driver: bridge

@@ -3,8 +3,8 @@
   "repo": "godor1333/Software_architecture_2025_API",
   "repo_url": "https://github.com/godor1333/Software_architecture_2025_API",
   "site_url": "https://godor1333.github.io/Software_architecture_2025_API/",
-  "updated_at": "2026-10-19T19:50:19+03:00",
-  "done": 0,
+  "updated_at": "2026-10-25T17:17:19+03:00",
+  "done": 5,
   "total": 40,
   "report_checklist": [
     "Цель и проблема проекта",
@@ -794,7 +794,7 @@
       "name": "Даша Фролова",
       "slug": "Frolova_Dasha",
       "path": "projects/Frolova_Dasha",
-      "done": 0,
+      "done": 1,
       "total": 5,
       "projects": [
         {
@@ -822,13 +822,13 @@
           ],
           "path": "projects/Frolova_Dasha/1_antifrod-biletov-na-kontserty",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Frolova_Dasha/1_antifrod-biletov-na-kontserty",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 29,
+          "submitted_at": "2026-10-24T11:48:38Z",
+          "pr": 1,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/1",
+          "by": "daralova",
+          "by_login": true
         },
         {
           "n": 2,
@@ -1316,7 +1316,7 @@
       "name": "Денис Куравин",
       "slug": "Kuravin_Denis",
       "path": "projects/Kuravin_Denis",
-      "done": 0,
+      "done": 4,
       "total": 5,
       "projects": [
         {
@@ -1344,13 +1344,13 @@
           ],
           "path": "projects/Kuravin_Denis/1_antifrod-reklamnogo-trafika",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Kuravin_Denis/1_antifrod-reklamnogo-trafika",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 30,
+          "submitted_at": "2026-10-25T14:16:18Z",
+          "pr": 4,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/4",
+          "by": "Deniel-b",
+          "by_login": true
         },
         {
           "n": 2,
@@ -1377,13 +1377,13 @@
           ],
           "path": "projects/Kuravin_Denis/2_detektsiya-defektov-na-fotografiyakh",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Kuravin_Denis/2_detektsiya-defektov-na-fotografiyakh",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 29,
+          "submitted_at": "2026-10-25T14:16:33Z",
+          "pr": 5,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/5",
+          "by": "Deniel-b",
+          "by_login": true
         },
         {
           "n": 3,
@@ -1410,13 +1410,13 @@
           ],
           "path": "projects/Kuravin_Denis/3_rag-poisk-po-knigam-i-uchebnym",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Kuravin_Denis/3_rag-poisk-po-knigam-i-uchebnym",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 28,
+          "submitted_at": "2026-10-25T14:16:44Z",
+          "pr": 6,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/6",
+          "by": "Deniel-b",
+          "by_login": true
         },
         {
           "n": 4,
@@ -1443,13 +1443,13 @@
           ],
           "path": "projects/Kuravin_Denis/4_analiz-tonalnosti-finansovykh-novostey",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Kuravin_Denis/4_analiz-tonalnosti-finansovykh-novostey",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 27,
+          "submitted_at": "2026-10-25T14:16:57Z",
+          "pr": 7,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/7",
+          "by": "Deniel-b",
+          "by_login": true
         },
         {
           "n": 5,

@@ -1,0 +1,35 @@
+@startuml
+skinparam monochrome true
+skinparam shadowing false
+skinparam linetype ortho
+skinparam dpi 180
+skinparam defaultFontName Arial
+skinparam componentStyle rectangle
+top to bottom direction
+
+actor "Клиент" as client
+component "TicketShield API\nFastAPI" as api
+queue "Kafka\norders.created" as created
+component "Feature Service" as feature
+database "Redis\nоперативные признаки" as redis
+queue "Kafka\norders.enriched" as enriched
+component "Scoring Service\nLightGBM и правила" as scoring
+database "PostgreSQL\nзаказы и решения" as pg
+queue "Kafka\nantifraud.decisions" as decisions
+component "Analytics Service" as analytics
+database "ClickHouse\nаналитика" as ch
+component "Dashboard" as dashboard
+
+client --> api : HTTP запрос
+api --> created : публикует заказ
+created --> feature : consumer group
+feature --> redis : читает и обновляет счётчики
+feature --> enriched : публикует признаки
+enriched --> scoring : consumer group
+scoring --> pg : сохраняет решение
+scoring --> decisions : публикует результат
+decisions --> analytics : consumer group
+analytics --> ch : записывает событие
+dashboard --> ch : читает сводку
+client --> dashboard : HTTP просмотр
+@enduml

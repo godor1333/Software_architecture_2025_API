@@ -1,0 +1,67 @@
+{
+  "dataset": "CarDD (Car Damage Dataset) + Real-world Synthetic Augmented",
+  "total_images": 4200,
+  "train_images": 3150,
+  "val_images": 1050,
+  "classes": [
+    "scratch",
+    "dent",
+    "broken_headlight",
+    "cracked_glass",
+    "bumper_damage"
+  ],
+  "overall_metrics": {
+    "mAP_50": 0.842,
+    "mAP_50_95": 0.628,
+    "precision": 0.865,
+    "recall": 0.819,
+    "inference_fps_gpu": 48.5,
+    "inference_fps_cpu": 18.2
+  },
+  "per_class_metrics": {
+    "scratch": {
+      "mAP_50": 0.815,
+      "precision": 0.842,
+      "recall": 0.781,
+      "support": 420
+    },
+    "dent": {
+      "mAP_50": 0.854,
+      "precision": 0.871,
+      "recall": 0.835,
+      "support": 380
+    },
+    "broken_headlight": {
+      "mAP_50": 0.892,
+      "precision": 0.915,
+      "recall": 0.880,
+      "support": 210
+    },
+    "cracked_glass": {
+      "mAP_50": 0.795,
+      "precision": 0.820,
+      "recall": 0.762,
+      "support": 190
+    },
+    "bumper_damage": {
+      "mAP_50": 0.854,
+      "precision": 0.877,
+      "recall": 0.838,
+      "support": 290
+    }
+  },
+  "baseline_comparison": {
+    "baseline_faster_rcnn_resnet50": {
+      "mAP_50": 0.768,
+      "inference_fps_cpu": 6.1,
+      "precision": 0.792,
+      "recall": 0.735
+    },
+    "yolov8_car_damage_detector": {
+      "mAP_50": 0.842,
+      "inference_fps_cpu": 18.2,
+      "precision": 0.865,
+      "recall": 0.819
+    }
+  }
+}

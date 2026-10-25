@@ -1,0 +1,141 @@
+name: ticketshield-antifraud
+
+services:
+  kafka:
+    image: confluentinc/cp-kafka:7.7.1
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://kafka:9092,CONTROLLER://kafka:29093,PLAINTEXT_HOST://0.0.0.0:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:29093
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
+    ports:
+      - "29092:29092"
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-topics --bootstrap-server kafka:9092 --list"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: antifraud
+      POSTGRES_USER: antifraud
+      POSTGRES_PASSWORD: antifraud
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/postgres.sql:/docker-entrypoint-initdb.d/01-postgres.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U antifraud -d antifraud"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.8-alpine
+    environment:
+      CLICKHOUSE_DB: antifraud
+      CLICKHOUSE_USER: antifraud
+      CLICKHOUSE_PASSWORD: antifraud
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./sql/clickhouse.sql:/docker-entrypoint-initdb.d/01-clickhouse.sql:ro
+    healthcheck:
+      # `localhost` resolves to IPv6 first in Docker Desktop's Linux VM,
+      # while this image listens on IPv4.  Use the loopback address explicitly.
+      test: ["CMD-SHELL", "wget -q -O - http://127.0.0.1:8123/ping | grep -q Ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  antifraud-api:
+    image: ticketshield-antifraud-app
+    build: .
+    environment: &app_environment
+      APP_MODE: distributed
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      POSTGRES_DSN: postgresql://antifraud:antifraud@postgres:5432/antifraud
+      REDIS_URL: redis://redis:6379/0
+      CLICKHOUSE_HOST: clickhouse
+      CLICKHOUSE_PORT: 8123
+      CLICKHOUSE_USER: antifraud
+      CLICKHOUSE_PASSWORD: antifraud
+      MODEL_VERSION: lightgbm-1.0
+      DECISION_THRESHOLD: "0.15"
+    ports:
+      - "8000:8000"
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+
+  feature-service:
+    image: ticketshield-antifraud-app
+    command: ["python", "-m", "app.workers", "feature"]
+    environment: *app_environment
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+
+  scoring-service:
+    image: ticketshield-antifraud-app
+    command: ["python", "-m", "app.workers", "scoring"]
+    environment: *app_environment
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+
+  analytics-service:
+    image: ticketshield-antifraud-app
+    command: ["python", "-m", "app.workers", "analytics"]
+    environment: *app_environment
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      clickhouse:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+  redis_data:
+  clickhouse_data:
