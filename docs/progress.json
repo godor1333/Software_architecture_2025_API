@@ -3,8 +3,8 @@
   "repo": "godor1333/Software_architecture_2025_API",
   "repo_url": "https://github.com/godor1333/Software_architecture_2025_API",
   "site_url": "https://godor1333.github.io/Software_architecture_2025_API/",
-  "updated_at": "2026-10-25T17:17:19+03:00",
-  "done": 5,
+  "updated_at": "2026-10-27T01:26:22+03:00",
+  "done": 7,
   "total": 40,
   "report_checklist": [
     "Цель и проблема проекта",
@@ -90,7 +90,7 @@
       "name": "Эля Варганова",
       "slug": "Varganova_Elya",
       "path": "projects/Varganova_Elya",
-      "done": 0,
+      "done": 1,
       "total": 5,
       "projects": [
         {
@@ -121,13 +121,13 @@
           ],
           "path": "projects/Varganova_Elya/1_rl-agent-dlya-upravleniya-gonochnym",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Varganova_Elya/1_rl-agent-dlya-upravleniya-gonochnym",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 27,
+          "submitted_at": "2026-10-26T22:26:09Z",
+          "pr": 9,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/9",
+          "by": "varganovaelya",
+          "by_login": true
         },
         {
           "n": 2,
@@ -1316,7 +1316,7 @@
       "name": "Денис Куравин",
       "slug": "Kuravin_Denis",
       "path": "projects/Kuravin_Denis",
-      "done": 4,
+      "done": 5,
       "total": 5,
       "projects": [
         {
@@ -1476,13 +1476,13 @@
           ],
           "path": "projects/Kuravin_Denis/5_prognozirovanie-energopotrebleniya",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Kuravin_Denis/5_prognozirovanie-energopotrebleniya",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 29,
+          "submitted_at": "2026-10-25T14:17:12Z",
+          "pr": 8,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/8",
+          "by": "Deniel-b",
+          "by_login": true
         }
       ]
     }

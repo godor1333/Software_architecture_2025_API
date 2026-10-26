@@ -3,10 +3,10 @@
 
 # Software Architecture 2025 — проекты студентов
 
-[![progress](https://img.shields.io/badge/progress-5%2F40%20(12%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
+[![progress](https://img.shields.io/badge/progress-7%2F40%20(18%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
 
 🌐 **Сайт с проектами:** https://godor1333.github.io/Software_architecture_2025_API/  
-🕒 Обновлено: 25.10.2026 17:17 (МСК)
+🕒 Обновлено: 27.10.2026 01:26 (МСК)
 
 Курс «Архитектура программного обеспечения», 2025. Здесь собираются проекты студентов:
 у каждого участника 5 проектов, у каждого проекта — своя папка с заданием (`TASK.md`).
@@ -16,23 +16,23 @@
 
 | Участник | Сдано | Прогресс |
 |---|:---:|---|
-| [Эля Варганова](#эля-варганова) | 0/5 | `░░░░░░░░░░` 0% |
+| [Эля Варганова](#эля-варганова) | 1/5 | `██░░░░░░░░` 20% |
 | [Никита Шарунин](#никита-шарунин) | 0/5 | `░░░░░░░░░░` 0% |
 | [Дима Леонов](#дима-леонов) | 0/5 | `░░░░░░░░░░` 0% |
 | [Лиля Тютерева](#лиля-тютерева) | 0/5 | `░░░░░░░░░░` 0% |
 | [Даша Фролова](#даша-фролова) | 1/5 | `██░░░░░░░░` 20% |
 | [Денис Сивогривов](#денис-сивогривов) | 0/5 | `░░░░░░░░░░` 0% |
 | [Артём Царьков](#артём-царьков) | 0/5 | `░░░░░░░░░░` 0% |
-| [Денис Куравин](#денис-куравин) | 4/5 | `████████░░` 80% |
-| **Всего** | **5/40** | `█░░░░░░░░░` 12% |
+| [Денис Куравин](#денис-куравин) | 5/5 | `██████████` 100% |
+| **Всего** | **7/40** | `██░░░░░░░░` 18% |
 
 ## Проекты
 
 ### Эля Варганова
 
-Папка: [`projects/Varganova_Elya/`](projects/Varganova_Elya) · сдано **0/5**
+Папка: [`projects/Varganova_Elya/`](projects/Varganova_Elya) · сдано **1/5**
 
-- [ ] **1. RL-агент для управления гоночным автомобилем** — [📁 папка](projects/Varganova_Elya/1_rl-agent-dlya-upravleniya-gonochnym)
+- [x] **1. RL-агент для управления гоночным автомобилем** — [📁 папка](projects/Varganova_Elya/1_rl-agent-dlya-upravleniya-gonochnym) · [PR #9](https://github.com/godor1333/Software_architecture_2025_API/pull/9) · @varganovaelya · принят 27.10.2026
 - [ ] **2. Антифрод для онлайн-казино/игровых ставок** — [📁 папка](projects/Varganova_Elya/2_antifrod-dlya-onlayn-kazino-igrovykh)
 - [ ] **3. Сегментация автомобилей на дорожных камерах** — [📁 папка](projects/Varganova_Elya/3_segmentatsiya-avtomobiley-na-dorozhnykh)
 - [ ] **4. LLM-система проверки юридических договоров** — [📁 папка](projects/Varganova_Elya/4_llm-sistema-proverki-yuridicheskikh)
@@ -100,13 +100,13 @@
 
 ### Денис Куравин
 
-Папка: [`projects/Kuravin_Denis/`](projects/Kuravin_Denis) · сдано **4/5**
+Папка: [`projects/Kuravin_Denis/`](projects/Kuravin_Denis) · сдано **5/5**
 
 - [x] **1. Антифрод рекламного трафика** — [📁 папка](projects/Kuravin_Denis/1_antifrod-reklamnogo-trafika) · [PR #4](https://github.com/godor1333/Software_architecture_2025_API/pull/4) · @Deniel-b · принят 25.10.2026
 - [x] **2. Детекция дефектов на фотографиях автомобилей** — [📁 папка](projects/Kuravin_Denis/2_detektsiya-defektov-na-fotografiyakh) · [PR #5](https://github.com/godor1333/Software_architecture_2025_API/pull/5) · @Deniel-b · принят 25.10.2026
 - [x] **3. RAG-поиск по книгам и учебным материалам** — [📁 папка](projects/Kuravin_Denis/3_rag-poisk-po-knigam-i-uchebnym) · [PR #6](https://github.com/godor1333/Software_architecture_2025_API/pull/6) · @Deniel-b · принят 25.10.2026
 - [x] **4. Анализ тональности финансовых новостей** — [📁 папка](projects/Kuravin_Denis/4_analiz-tonalnosti-finansovykh-novostey) · [PR #7](https://github.com/godor1333/Software_architecture_2025_API/pull/7) · @Deniel-b · принят 25.10.2026
-- [ ] **5. Прогнозирование энергопотребления здания** — [📁 папка](projects/Kuravin_Denis/5_prognozirovanie-energopotrebleniya)
+- [x] **5. Прогнозирование энергопотребления здания** — [📁 папка](projects/Kuravin_Denis/5_prognozirovanie-energopotrebleniya) · [PR #8](https://github.com/godor1333/Software_architecture_2025_API/pull/8) · @Deniel-b · принят 25.10.2026
 
 ## Как сдать проект
 
