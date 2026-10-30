@@ -1,0 +1,2 @@
+source: frames/docker-audit-01.png bytes: 412229 etag: c95b5414d6b9b77113fb79946df72017
+mask: masks/docker-audit-01.png bytes: 4364 etag: ceb6c46beee81495f55af916f15e0602

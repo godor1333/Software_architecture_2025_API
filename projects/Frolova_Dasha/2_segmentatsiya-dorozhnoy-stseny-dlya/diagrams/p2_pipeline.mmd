@@ -1,0 +1,7 @@
+flowchart TB
+ A["PNG / JPEG, frame_id и flight_id"] --> B{"Выбор<br/>алгоритма"}
+ B -->|"без модели"| C["Цветовой baseline"]
+ B -->|"SEGMENTATION_MODEL"| D["SegFormer + OpenCV<br/>кандидаты разметки"]
+ C & D --> E["Маска и доли классов"]
+ E --> F["Запись: локально /<br/>MinIO и PostgreSQL"]
+ F --> G["Событие frames.segmented"]

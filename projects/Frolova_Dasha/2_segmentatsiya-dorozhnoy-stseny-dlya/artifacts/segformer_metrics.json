@@ -1,0 +1,24 @@
+{
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-1024-1024",
+  "weights_source": "Hugging Face Hub",
+  "input": "comma10k_image.png",
+  "pixels": 1017336,
+  "predicted_class_pixels": {
+    "road": 373380,
+    "car": 141856,
+    "pedestrian": 0,
+    "lane_marking": 11351,
+    "obstacle": 186827,
+    "other": 303922
+  },
+  "predicted_class_share": {
+    "road": 0.367017,
+    "car": 0.139439,
+    "pedestrian": 0.0,
+    "lane_marking": 0.011158,
+    "obstacle": 0.183643,
+    "other": 0.298743
+  },
+  "mask": "segformer_mask.png",
+  "inference": "completed"
+}

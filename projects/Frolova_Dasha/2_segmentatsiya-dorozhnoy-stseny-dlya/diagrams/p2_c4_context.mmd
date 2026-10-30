@@ -1,0 +1,6 @@
+flowchart LR
+  operator["Оператор БПЛА"] --> client["Клиент видеопотока"]
+  client --> system["Scene Segmentation System"]
+  system --> analytics["Scene Analytics / Dashboard"]
+  system --> archive["Архив кадров и масок"]
+  system --> broker["Kafka event broker"]
