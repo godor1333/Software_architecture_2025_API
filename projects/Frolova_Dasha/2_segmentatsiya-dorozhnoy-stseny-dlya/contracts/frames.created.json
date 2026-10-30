@@ -1,0 +1,14 @@
+{
+  "topic": "frames.created",
+  "encoding": "UTF-8 JSON",
+  "key": "frame_id",
+  "value": {
+    "frame_id": "f2-0001",
+    "flight_id": "flight1",
+    "bucket": "scene-frames",
+    "source_object": "frames/f2-0001.png",
+    "captured_at": "2026-10-29T16:30:00Z",
+    "content_type": "image/png"
+  },
+  "required": ["frame_id", "flight_id", "bucket", "source_object"]
+}

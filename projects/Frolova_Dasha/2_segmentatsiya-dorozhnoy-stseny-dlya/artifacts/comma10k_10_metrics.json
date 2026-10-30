@@ -1,0 +1,74 @@
+{
+  "dataset": "comma10k",
+  "dataset_source": "https://raw.githubusercontent.com/commaai/comma10k/master/",
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-1024-1024",
+  "samples": 10,
+  "metric": "mean per-image IoU",
+  "segformer_mean_road_iou": 0.6923,
+  "baseline_mean_road_iou": 0.2712,
+  "opencv_mean_lane_iou": 0.3365,
+  "exclude": "own-car pixels",
+  "samples_detail": [
+    {
+      "image": "0000_0085e9e41513078a_2018-08-19--13-26-08_11_864.png",
+      "segformer_road_iou": 0.9536,
+      "baseline_road_iou": 0.3338,
+      "lane_iou": 0.6852
+    },
+    {
+      "image": "0001_a23b0de0bc12dcba_2018-06-24--00-29-19_17_79.png",
+      "segformer_road_iou": 0.2292,
+      "baseline_road_iou": 0.2949,
+      "lane_iou": 0.1934
+    },
+    {
+      "image": "0002_e8e95b54ed6116a6_2018-09-05--22-04-33_2_608.png",
+      "segformer_road_iou": 0.5275,
+      "baseline_road_iou": 0.2085,
+      "lane_iou": 0.0
+    },
+    {
+      "image": "0003_97a4ec76e41e8853_2018-09-29--22-46-37_5_585.png",
+      "segformer_road_iou": 0.2831,
+      "baseline_road_iou": 0.2678,
+      "lane_iou": 0.4513
+    },
+    {
+      "image": "0004_2ac95059f70d76eb_2018-05-12--17-46-52_56_371.png",
+      "segformer_road_iou": 0.8653,
+      "baseline_road_iou": 0.3695,
+      "lane_iou": 0.511
+    },
+    {
+      "image": "0005_836d09212ac1b8fa_2018-06-15--15-57-15_23_345.png",
+      "segformer_road_iou": 0.8048,
+      "baseline_road_iou": 0.2264,
+      "lane_iou": 0.4554
+    },
+    {
+      "image": "0006_0c5c849415c7dba2_2018-08-12--10-26-26_5_1159.png",
+      "segformer_road_iou": 0.8084,
+      "baseline_road_iou": 0.2065,
+      "lane_iou": 0.1296
+    },
+    {
+      "image": "0007_b5e785c1fc446ed0_2018-06-14--08-27-35_78_873.png",
+      "segformer_road_iou": 0.8629,
+      "baseline_road_iou": 0.305,
+      "lane_iou": 0.2126
+    },
+    {
+      "image": "0008_b8727c7398d117f5_2018-10-22--15-38-24_71_990.png",
+      "segformer_road_iou": 0.6979,
+      "baseline_road_iou": 0.2219,
+      "lane_iou": 0.4552
+    },
+    {
+      "image": "0009_ef53f1ffea65e93c_2018-07-26--03-48-48_14_191.png",
+      "segformer_road_iou": 0.8907,
+      "baseline_road_iou": 0.2773,
+      "lane_iou": 0.2709
+    }
+  ],
+  "limitations": "ten selected images; OpenCV lane heuristic tuned using the first image; the reported set is not independent"
+}

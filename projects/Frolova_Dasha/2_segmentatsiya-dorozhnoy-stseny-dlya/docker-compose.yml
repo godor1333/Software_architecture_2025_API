@@ -1,0 +1,5 @@
+services:
+  scene-segmentation:
+    build: .
+    ports:
+      - "8012:8012"

@@ -1,0 +1,207 @@
+{
+  "stream": "demo_stream.mp4",
+  "flight_id": "flight-demo",
+  "frames_processed": 8,
+  "results": [
+    {
+      "frame_id": "video-0000",
+      "flight_id": "flight-demo",
+      "mask": "video-0000_mask.png",
+      "class_share": {
+        "road": 0.8615,
+        "car": 0.0851,
+        "pedestrian": 0.0316,
+        "lane_marking": 0.0219,
+        "obstacle": 0.0,
+        "other": 0.0
+      },
+      "captured_at": "2026-10-29T16:30:51.338325+00:00",
+      "width": 320,
+      "height": 180,
+      "dominant_class": "road",
+      "preprocessing": {
+        "orientation": "EXIF applied",
+        "color_space": "RGB",
+        "max_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "frame_id": "video-0001",
+      "flight_id": "flight-demo",
+      "mask": "video-0001_mask.png",
+      "class_share": {
+        "road": 0.8614,
+        "car": 0.0851,
+        "pedestrian": 0.0316,
+        "lane_marking": 0.0219,
+        "obstacle": 0.0,
+        "other": 0.0
+      },
+      "captured_at": "2026-10-29T16:30:51.419585+00:00",
+      "width": 320,
+      "height": 180,
+      "dominant_class": "road",
+      "preprocessing": {
+        "orientation": "EXIF applied",
+        "color_space": "RGB",
+        "max_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "frame_id": "video-0002",
+      "flight_id": "flight-demo",
+      "mask": "video-0002_mask.png",
+      "class_share": {
+        "road": 0.8615,
+        "car": 0.0851,
+        "pedestrian": 0.0316,
+        "lane_marking": 0.0219,
+        "obstacle": 0.0,
+        "other": 0.0
+      },
+      "captured_at": "2026-10-29T16:30:51.478312+00:00",
+      "width": 320,
+      "height": 180,
+      "dominant_class": "road",
+      "preprocessing": {
+        "orientation": "EXIF applied",
+        "color_space": "RGB",
+        "max_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "frame_id": "video-0003",
+      "flight_id": "flight-demo",
+      "mask": "video-0003_mask.png",
+      "class_share": {
+        "road": 0.8615,
+        "car": 0.0851,
+        "pedestrian": 0.0316,
+        "lane_marking": 0.0219,
+        "obstacle": 0.0,
+        "other": 0.0
+      },
+      "captured_at": "2026-10-29T16:30:51.539276+00:00",
+      "width": 320,
+      "height": 180,
+      "dominant_class": "road",
+      "preprocessing": {
+        "orientation": "EXIF applied",
+        "color_space": "RGB",
+        "max_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "frame_id": "video-0004",
+      "flight_id": "flight-demo",
+      "mask": "video-0004_mask.png",
+      "class_share": {
+        "road": 0.8614,
+        "car": 0.0851,
+        "pedestrian": 0.0316,
+        "lane_marking": 0.0219,
+        "obstacle": 0.0,
+        "other": 0.0
+      },
+      "captured_at": "2026-10-29T16:30:51.613463+00:00",
+      "width": 320,
+      "height": 180,
+      "dominant_class": "road",
+      "preprocessing": {
+        "orientation": "EXIF applied",
+        "color_space": "RGB",
+        "max_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "frame_id": "video-0005",
+      "flight_id": "flight-demo",
+      "mask": "video-0005_mask.png",
+      "class_share": {
+        "road": 0.8615,
+        "car": 0.0851,
+        "pedestrian": 0.0316,
+        "lane_marking": 0.0219,
+        "obstacle": 0.0,
+        "other": 0.0
+      },
+      "captured_at": "2026-10-29T16:30:51.705427+00:00",
+      "width": 320,
+      "height": 180,
+      "dominant_class": "road",
+      "preprocessing": {
+        "orientation": "EXIF applied",
+        "color_space": "RGB",
+        "max_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "frame_id": "video-0006",
+      "flight_id": "flight-demo",
+      "mask": "video-0006_mask.png",
+      "class_share": {
+        "road": 0.8615,
+        "car": 0.0851,
+        "pedestrian": 0.0316,
+        "lane_marking": 0.0219,
+        "obstacle": 0.0,
+        "other": 0.0
+      },
+      "captured_at": "2026-10-29T16:30:51.770709+00:00",
+      "width": 320,
+      "height": 180,
+      "dominant_class": "road",
+      "preprocessing": {
+        "orientation": "EXIF applied",
+        "color_space": "RGB",
+        "max_size": [
+          1280,
+          720
+        ]
+      }
+    },
+    {
+      "frame_id": "video-0007",
+      "flight_id": "flight-demo",
+      "mask": "video-0007_mask.png",
+      "class_share": {
+        "road": 0.8615,
+        "car": 0.0851,
+        "pedestrian": 0.0316,
+        "lane_marking": 0.0219,
+        "obstacle": 0.0,
+        "other": 0.0
+      },
+      "captured_at": "2026-10-29T16:30:51.838700+00:00",
+      "width": 320,
+      "height": 180,
+      "dominant_class": "road",
+      "preprocessing": {
+        "orientation": "EXIF applied",
+        "color_space": "RGB",
+        "max_size": [
+          1280,
+          720
+        ]
+      }
+    }
+  ]
+}

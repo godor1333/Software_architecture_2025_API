@@ -1,0 +1,5 @@
+digraph G {
+ rankdir=TB; graph [bgcolor="white",pad="0.3"]; node [shape=box,style="rounded,filled",fillcolor="#e7f0fb",fontname="Arial",fontsize=13]; edge [fontname="Arial",fontsize=11];
+ stream [label="VideoStreamAdapter"]; prep [label="FramePreprocessor\nEXIF, RGB, resize"]; strategy [label="SegmentationPipeline",fillcolor="#cfe0f7"]; baseline [label="ColorSegmentationStrategy"]; model [label="ModelSegmentationStrategy\nSegFormerAdapter"]; mask [label="Mask + class_share",fillcolor="#dff3e2"]; repo [label="MinIO + PostgreSQL"]; observer [label="SceneAnalyticsObserver"]; dash [label="Analytics API + Dashboard"]; pub [label="Kafka frames.segmented"];
+ stream -> prep -> strategy; strategy -> baseline; strategy -> model; baseline -> mask; model -> mask; mask -> repo; mask -> observer -> dash; mask -> pub;
+}

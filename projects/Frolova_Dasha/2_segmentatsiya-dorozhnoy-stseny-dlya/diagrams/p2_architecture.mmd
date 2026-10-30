@@ -1,0 +1,10 @@
+flowchart TB
+ client["Клиент камеры"] -->|"POST кадра"| api["Scene API<br/>FastAPI"]
+ api --> proc["Сегментация<br/>цветовой метод / SegFormer"]
+ api --> pg[("PostgreSQL<br/>segmented_frames")]
+ api --> minio[("MinIO<br/>кадры и маски")]
+ api --> ready["Kafka<br/>frames.segmented"]
+ source["Источник кадров"] --> incoming["Kafka<br/>frames.created"] --> worker["Worker<br/>scene-segmentation"]
+ worker -->|"читает и сохраняет"| minio
+ worker -->|"метаданные"| pg
+ worker --> ready

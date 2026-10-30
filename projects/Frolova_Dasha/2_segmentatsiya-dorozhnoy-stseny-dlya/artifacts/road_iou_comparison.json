@@ -1,0 +1,12 @@
+{
+  "dataset": "comma10k",
+  "sample_count": 1,
+  "sample_id": "0000_0085e9e41513078a_2018-08-19--13-26-08_11_864",
+  "source": "https://github.com/commaai/comma10k",
+  "metric": "road IoU",
+  "segformer_road_iou": 0.9536,
+  "color_baseline_road_iou": 0.3338,
+  "excluded": "own car pixels",
+  "model": "nvidia/segformer-b0-finetuned-cityscapes-1024-1024",
+  "limitation": "single labelled image; no separate lane-marking class in this Cityscapes model"
+}
