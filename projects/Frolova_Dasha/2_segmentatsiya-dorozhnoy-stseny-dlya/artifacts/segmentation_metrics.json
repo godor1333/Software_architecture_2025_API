@@ -1,0 +1,13 @@
+{
+  "per_class_iou": {
+    "road": 1.0,
+    "car": 1.0,
+    "pedestrian": 1.0,
+    "lane_marking": 1.0,
+    "obstacle": null
+  },
+  "mIoU": 1.0,
+  "model": "color-baseline",
+  "samples": 1,
+  "seed": 20261027
+}

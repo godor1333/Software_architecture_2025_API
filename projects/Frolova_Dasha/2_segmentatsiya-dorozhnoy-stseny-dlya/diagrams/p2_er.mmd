@@ -1,0 +1,24 @@
+erDiagram
+ FRAMES {
+  text frame_id PK
+  text flight_id
+  datetime captured_at
+  text image_path
+  text mask_path
+  json metrics
+ }
+ SEGMENTED_FRAMES {
+  text frame_id PK
+  text flight_id
+  datetime captured_at
+  text source_object
+  text mask_object
+  json class_share
+ }
+ MINIO_OBJECT {
+  text bucket
+  text object_key
+  binary png_data
+ }
+ SEGMENTED_FRAMES }o--|| MINIO_OBJECT : "source_object"
+ SEGMENTED_FRAMES }o--|| MINIO_OBJECT : "mask_object"

@@ -1,0 +1,11 @@
+flowchart TB
+  stream["VideoStreamAdapter"] --> prep["FramePreprocessor\nEXIF, RGB, resize"]
+  prep --> strategy["SegmentationPipeline"]
+  strategy --> baseline["ColorSegmentationStrategy"]
+  strategy --> model["ModelSegmentationStrategy\nSegFormerAdapter"]
+  baseline --> mask["Mask + class_share"]
+  model --> mask
+  mask --> repo["MinioFrameStore + PostgresFrameRepository"]
+  mask --> observer["SceneAnalyticsObserver"]
+  observer --> dashboard["Analytics API + Dashboard"]
+  mask --> publisher["SegmentationEventPublisher\nframes.segmented"]

@@ -1,0 +1,10 @@
+Pillow>=10.0
+numpy>=2.0
+opencv-python-headless>=4.10
+transformers>=4.45
+torchvision>=0.24
+aiokafka>=0.10
+minio>=7.2
+asyncpg>=0.29
+fastapi>=0.115,<1
+uvicorn>=0.30,<1

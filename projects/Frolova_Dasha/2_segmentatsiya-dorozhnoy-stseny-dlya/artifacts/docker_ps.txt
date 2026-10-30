@@ -1,0 +1,6 @@
+NAME                       IMAGE                                             COMMAND                  SERVICE    CREATED              STATUS                   PORTS
+lr2scenecheck-api-1        lr2scenecheck-api                                 "uvicorn api:api --h…"   api        About a minute ago   Up About a minute        0.0.0.0:18012->8012/tcp, [::]:18012->8012/tcp
+lr2scenecheck-kafka-1      confluentinc/cp-kafka:7.7.1                       "/etc/confluent/dock…"   kafka      3 minutes ago        Up 3 minutes (healthy)   9092/tcp
+lr2scenecheck-minio-1      lr2-minio-official:RELEASE.2024-10-13T13-34-11Z   "/usr/local/bin/mini…"   minio      3 minutes ago        Up 3 minutes (healthy)   0.0.0.0:9000-9001->9000-9001/tcp, [::]:9000-9001->9000-9001/tcp
+lr2scenecheck-postgres-1   postgres:16-alpine                                "docker-entrypoint.s…"   postgres   3 minutes ago        Up 3 minutes (healthy)   5432/tcp
+lr2scenecheck-worker-1     lr2scenecheck-worker                              "python worker.py"       worker     3 minutes ago        Up 3 minutes             8012/tcp

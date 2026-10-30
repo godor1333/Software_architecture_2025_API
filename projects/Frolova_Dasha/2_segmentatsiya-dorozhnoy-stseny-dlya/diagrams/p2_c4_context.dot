@@ -1,0 +1,5 @@
+digraph G {
+ rankdir=LR; graph [bgcolor="white",pad="0.3"]; node [shape=box,style="rounded,filled",fillcolor="#e7f0fb",fontname="Arial",fontsize=16]; edge [fontname="Arial",fontsize=12];
+ operator [label="Оператор БПЛА"]; client [label="Клиент\nвидеопотока"]; system [label="Scene Segmentation\nSystem",fillcolor="#cfe0f7"]; analytics [label="Scene Analytics\n/ Dashboard"]; archive [label="Архив кадров\nи масок"]; broker [label="Kafka\nevent broker"];
+ operator -> client; client -> system; system -> analytics; system -> archive; system -> broker;
+}
