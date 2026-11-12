@@ -1,0 +1,9 @@
+            List of relations
+ Schema |      Name      | Type  | Owner 
+--------+----------------+-------+-------
+ public | checkpoints    | table | pong
+ public | episodes       | table | pong
+ public | experiments    | table | pong
+ public | inference_logs | table | pong
+(4 rows)
+

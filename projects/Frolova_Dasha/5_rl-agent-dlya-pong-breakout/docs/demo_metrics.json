@@ -1,0 +1,9 @@
+{
+  "episodes_trained": 457,
+  "total_steps": 150000,
+  "mean_reward_first_50": -3.66,
+  "mean_reward_last_50": 5.66,
+  "improvement": 9.32,
+  "random_baseline_mean": -4.44,
+  "last_50_score": 0.98
+}

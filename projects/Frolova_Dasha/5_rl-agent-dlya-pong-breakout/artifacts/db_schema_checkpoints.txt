@@ -1,0 +1,12 @@
+                                        Table "public.checkpoints"
+    Column     |           Type           | Collation | Nullable |                 Default                 
+---------------+--------------------------+-----------+----------+-----------------------------------------
+ id            | bigint                   |           | not null | nextval('checkpoints_id_seq'::regclass)
+ experiment_id | text                     |           | not null | 
+ run_id        | text                     |           |          | 
+ step          | integer                  |           | not null | 
+ artifact_uri  | text                     |           | not null | 
+ created_at    | timestamp with time zone |           | not null | now()
+Indexes:
+    "checkpoints_pkey" PRIMARY KEY, btree (id)
+

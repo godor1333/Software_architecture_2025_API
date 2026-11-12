@@ -1,0 +1,6 @@
+[PASS] GET /health (inference) {"status":"ok","model_loaded":true,"model":"DQN"}
+[PASS] POST /predict action=1 latency=89.622ms
+[PASS] GET /health (metrics-api) {"status":"ok","postgres":"ok"}
+[PASS] GET /experiments {"experiments":[{"experiment_id":"dqn-PongPygame-v0","episodes":105,"first_episode":1,"last_episode":52,"avg_reward":-6.355}]}
+============================================================
+SMOKE RESULT: ALL PASS

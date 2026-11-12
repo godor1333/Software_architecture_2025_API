@@ -1,0 +1,99 @@
+[
+    {
+        "Name": "rl-pong-architecture_pong-net",
+        "Id": "766c791655f8904dd363763340915e17c9592fd4d04c8d431a118341dca54a2a",
+        "Created": "2026-11-08T15:42:32.290260222Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.19.0.0/16",
+                    "Gateway": "172.19.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Options": {
+            "com.docker.network.enable_ipv4": "true",
+            "com.docker.network.enable_ipv6": "false"
+        },
+        "Labels": {
+            "com.docker.compose.config-hash": "5449ad24a2359753d922ca328fa9eb2607a32ea7d8e971e6408a75e310554608",
+            "com.docker.compose.network": "pong-net",
+            "com.docker.compose.project": "rl-pong-architecture",
+            "com.docker.compose.version": "5.6.1"
+        },
+        "Containers": {
+            "1c4fc691619438a3c5ae8e1f0ed80adbcfddcb6ca625f920bcd4d1faff5ac549": {
+                "Name": "rl-pong-architecture-zookeeper-1",
+                "EndpointID": "42f88f4c9ca000bddbcc058dedc97ee6f379ed84468a291c29a6855a03ef71c4",
+                "MacAddress": "4e:37:e1:b4:5f:ad",
+                "IPv4Address": "172.19.0.2/16",
+                "IPv6Address": ""
+            },
+            "33b6d7857728ab1c952c5dee8ad2a6b225589116959e7120fd41868526cdc29e": {
+                "Name": "rl-pong-architecture-metrics-api-1",
+                "EndpointID": "1183d3172d39a3259d6f30ffe4537fe8d78e55ed97ffbcd10ba1729d421b72d5",
+                "MacAddress": "46:e0:1c:5f:18:66",
+                "IPv4Address": "172.19.0.7/16",
+                "IPv6Address": ""
+            },
+            "57192bea2f44d65d8c20bf8f8a2ff859ae1c491ccec5b0175f7a5e25a6070e30": {
+                "Name": "rl-pong-architecture-metrics-consumer-1",
+                "EndpointID": "677ee87df97f66ad93cf9c07a62af365076810c9df853d04812d33ab4361caa4",
+                "MacAddress": "3e:77:1c:39:4c:1b",
+                "IPv4Address": "172.19.0.8/16",
+                "IPv6Address": ""
+            },
+            "64fcc1c93b7fe8f62963da1f97f011234232297b272c557c53b7c719068c5909": {
+                "Name": "rl-pong-architecture-postgres-1",
+                "EndpointID": "53b44e6e41a460832121c392a177ace64f405d359678b8d54d53d76391d497be",
+                "MacAddress": "02:f1:ab:0d:aa:31",
+                "IPv4Address": "172.19.0.4/16",
+                "IPv6Address": ""
+            },
+            "697582e26d6bff915ba05aa2a3513fea0f47b135f89dd192cb3f14201de8e073": {
+                "Name": "rl-pong-architecture-inference-1",
+                "EndpointID": "f50dd49554a5ad5cfdb2a953ed42f13359d589cf33819b06e2bf030eaebdbe88",
+                "MacAddress": "02:af:82:bc:bc:0c",
+                "IPv4Address": "172.19.0.6/16",
+                "IPv6Address": ""
+            },
+            "8202033a3871464c22b107551a4484a74ad919b3f61ea61edbcc68a1da7578c8": {
+                "Name": "rl-pong-architecture-mlflow-1",
+                "EndpointID": "a1676f3ad9af30a64f59d1e9f0de87cb137a9dd8a97a2bb1b90e2a1d6cbf0a85",
+                "MacAddress": "a2:1a:54:5e:38:a2",
+                "IPv4Address": "172.19.0.3/16",
+                "IPv6Address": ""
+            },
+            "b9d1ccd7b9f1b5c8c02ba0fc91c01c888b168c16084f2b2c2d1a738f8dd87730": {
+                "Name": "rl-pong-architecture-kafka-1",
+                "EndpointID": "1a911e28390af2fc01e8084d3f6bf829ca76200482987a593d7aec7f85e46bc5",
+                "MacAddress": "e6:ae:3e:21:04:17",
+                "IPv4Address": "172.19.0.5/16",
+                "IPv6Address": ""
+            }
+        },
+        "Status": {
+            "IPAM": {
+                "Subnets": {
+                    "172.19.0.0/16": {
+                        "IPsInUse": 10,
+                        "DynamicIPsAvailable": 65526
+                    }
+                }
+            }
+        }
+    }
+]

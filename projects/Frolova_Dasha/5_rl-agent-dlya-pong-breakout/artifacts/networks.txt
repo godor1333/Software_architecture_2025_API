@@ -1,0 +1,6 @@
+NETWORK ID     NAME                            DRIVER    SCOPE
+75a6ae3c9a07   bridge                          bridge    local
+7909fc76873e   host                            host      local
+81b5e927be40   none                            null      local
+e367315c7f8d   project_4_default               bridge    local
+31d78a8e20cd   rl-pong-architecture_pong-net   bridge    local

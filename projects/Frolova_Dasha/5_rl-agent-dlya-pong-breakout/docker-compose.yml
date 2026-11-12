@@ -1,0 +1,156 @@
+
+
+networks:
+  pong-net:
+    driver: bridge
+
+volumes:
+  pgdata:
+  mlflow-data:
+  models-data:
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.1
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks: [pong-net]
+
+  kafka:
+    image: confluentinc/cp-kafka:7.6.1
+    depends_on: [zookeeper]
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-topics --bootstrap-server localhost:9092 --list || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+    networks: [pong-net]
+
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: pong
+      POSTGRES_PASSWORD: pong
+      POSTGRES_DB: pong_metrics
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./deploy/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pong -d pong_metrics"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks: [pong-net]
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.9.2
+    command: >
+      mlflow server --backend-store-uri sqlite:////data/mlflow.db
+      --default-artifact-root /data/artifacts
+      --host 0.0.0.0 --port 5000
+    volumes:
+      - mlflow-data:/data
+    ports:
+      - "5001:5000"
+    networks: [pong-net]
+
+  trainer:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    command: python -m src.training.train
+    environment:
+      KAFKA_BOOTSTRAP: kafka:9092
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      POSTGRES_DSN: postgresql://pong:pong@postgres:5432/pong_metrics
+      MODEL_PATH: /models/pong_dqn.zip
+      ALGORITHM: DQN
+      ENV_NAME: PongPygame-v0
+      REWARD_STRATEGY: shaped
+      TOTAL_TIMESTEPS: "200000"
+      SEED: "42"
+    volumes:
+      - ./src:/app/src
+      - models-data:/models
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+      mlflow:
+        condition: service_started
+    networks: [pong-net]
+
+  inference:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    command: uvicorn src.inference.api:app --host 0.0.0.0 --port 8000
+    environment:
+      KAFKA_BOOTSTRAP: kafka:9092
+      MODEL_PATH: /models/pong_dqn.zip
+    ports:
+      - "8000:8000"
+    volumes:
+      - models-data:/models
+    depends_on: [kafka]
+    networks: [pong-net]
+
+  metrics-consumer:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    command: python -m src.metrics.consumer
+    environment:
+      KAFKA_BOOTSTRAP: kafka:9092
+      POSTGRES_DSN: postgresql://pong:pong@postgres:5432/pong_metrics
+    depends_on:
+      kafka:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    networks: [pong-net]
+
+  metrics-api:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    command: uvicorn src.metrics.api:app --host 0.0.0.0 --port 8001
+    environment:
+      POSTGRES_DSN: postgresql://pong:pong@postgres:5432/pong_metrics
+    ports:
+      - "8001:8001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks: [pong-net]
+
+  tests:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    command: pytest -q tests
+    environment:
+      KAFKA_BOOTSTRAP: kafka:9092
+    profiles: ["tools"]
+    networks: [pong-net]
+
+  smoke:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    command: python scripts/smoke_test.py
+    environment:
+      INFERENCE_URL: http://inference:8000
+      METRICS_URL: http://metrics-api:8001
+    profiles: ["tools"]
+    depends_on: [inference, metrics-api]
+    networks: [pong-net]

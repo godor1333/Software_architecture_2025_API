@@ -1,0 +1,9 @@
+                        Table "public.experiments"
+    Column     |           Type           | Collation | Nullable | Default 
+---------------+--------------------------+-----------+----------+---------
+ experiment_id | text                     |           | not null | 
+ algorithm     | text                     |           |          | 
+ created_at    | timestamp with time zone |           |          | now()
+Indexes:
+    "experiments_pkey" PRIMARY KEY, btree (experiment_id)
+

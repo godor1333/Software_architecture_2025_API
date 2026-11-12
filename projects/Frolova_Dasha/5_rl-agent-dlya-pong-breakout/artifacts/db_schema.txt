@@ -1,0 +1,17 @@
+                                        Table "public.episodes"
+    Column     |           Type           | Collation | Nullable |               Default                
+---------------+--------------------------+-----------+----------+--------------------------------------
+ id            | bigint                   |           | not null | nextval('episodes_id_seq'::regclass)
+ experiment_id | text                     |           | not null | 
+ run_id        | text                     |           |          | 
+ episode       | integer                  |           | not null | 
+ steps         | integer                  |           | not null | 
+ reward        | real                     |           | not null | 
+ epsilon       | real                     |           |          | 
+ loss          | real                     |           |          | 
+ created_at    | timestamp with time zone |           | not null | now()
+Indexes:
+    "episodes_pkey" PRIMARY KEY, btree (id)
+    "idx_episodes_created" btree (created_at)
+    "idx_episodes_exp_episode" btree (experiment_id, episode DESC)
+

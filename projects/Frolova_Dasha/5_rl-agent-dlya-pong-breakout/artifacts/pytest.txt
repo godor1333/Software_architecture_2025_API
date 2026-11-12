@@ -1,0 +1,52 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.22, pytest-8.0.2, pluggy-1.7.0 -- /usr/local/bin/python3.10
+cachedir: .pytest_cache
+rootdir: /app
+plugins: anyio-4.16.0
+collecting ... collected 15 items
+
+tests/test_env.py::test_observation_shape PASSED                         [  6%]
+tests/test_env.py::test_action_space PASSED                              [ 13%]
+tests/test_env.py::test_match_ends_at_max_score PASSED                   [ 20%]
+tests/test_env.py::test_conceding_gives_negative_reward PASSED           [ 26%]
+tests/test_patterns.py::test_env_factory_known_name PASSED               [ 33%]
+tests/test_patterns.py::test_env_factory_unknown_name_raises PASSED      [ 40%]
+tests/test_patterns.py::test_command_paddle_moves PASSED                 [ 46%]
+tests/test_patterns.py::test_state_transitions PASSED                    [ 53%]
+tests/test_patterns.py::test_reward_strategies_registered PASSED         [ 60%]
+tests/test_patterns.py::test_agent_factory_unknown_raises PASSED         [ 66%]
+tests/test_patterns.py::test_agent_factory_registry_has_dqn_and_ppo PASSED [ 73%]
+tests/test_schemas.py::test_episode_roundtrip PASSED                     [ 80%]
+tests/test_schemas.py::test_checkpoint_roundtrip PASSED                  [ 86%]
+tests/test_schemas.py::test_prediction_roundtrip PASSED                  [ 93%]
+tests/test_schemas.py::test_command_roundtrip PASSED                     [100%]
+
+=============================== warnings summary ===============================
+../usr/local/lib/python3.10/site-packages/pygame/pkgdata.py:25
+  /usr/local/lib/python3.10/site-packages/pygame/pkgdata.py:25: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    from pkg_resources import resource_stream, resource_exists
+
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+  /usr/local/lib/python3.10/site-packages/matplotlib/_fontconfig_pattern.py:88: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+tests/test_patterns.py::test_agent_factory_unknown_raises
+  /usr/local/lib/python3.10/site-packages/matplotlib/_fontconfig_pattern.py:92: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+tests/test_patterns.py::test_agent_factory_unknown_raises
+  /usr/local/lib/python3.10/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 15 passed, 14 warnings in 1.55s ========================

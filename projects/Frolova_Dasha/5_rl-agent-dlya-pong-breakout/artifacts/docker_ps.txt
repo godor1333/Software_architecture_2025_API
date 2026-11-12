@@ -1,0 +1,8 @@
+NAME                                      IMAGE                                   COMMAND                  SERVICE            CREATED         STATUS                   PORTS
+rl-pong-architecture-inference-1          rl-pong-architecture-inference          "uvicorn src.inferen…"   inference          5 minutes ago   Up 5 minutes             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+rl-pong-architecture-kafka-1              confluentinc/cp-kafka:7.6.1             "/etc/confluent/dock…"   kafka              5 minutes ago   Up 5 minutes (healthy)   9092/tcp
+rl-pong-architecture-metrics-api-1        rl-pong-architecture-metrics-api        "uvicorn src.metrics…"   metrics-api        5 minutes ago   Up 5 minutes             0.0.0.0:8001->8001/tcp, [::]:8001->8001/tcp
+rl-pong-architecture-metrics-consumer-1   rl-pong-architecture-metrics-consumer   "python -m src.metri…"   metrics-consumer   5 minutes ago   Up 5 minutes             
+rl-pong-architecture-mlflow-1             ghcr.io/mlflow/mlflow:v2.9.2            "mlflow server --bac…"   mlflow             5 minutes ago   Up 5 minutes             0.0.0.0:5001->5000/tcp, [::]:5001->5000/tcp
+rl-pong-architecture-postgres-1           postgres:15-alpine                      "docker-entrypoint.s…"   postgres           5 minutes ago   Up 5 minutes (healthy)   5432/tcp
+rl-pong-architecture-zookeeper-1          confluentinc/cp-zookeeper:7.6.1         "/etc/confluent/dock…"   zookeeper          5 minutes ago   Up 5 minutes             2181/tcp, 2888/tcp, 3888/tcp
