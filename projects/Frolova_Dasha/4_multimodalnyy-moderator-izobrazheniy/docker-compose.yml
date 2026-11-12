@@ -1,0 +1,176 @@
+
+networks:
+  forummod_net:
+    name: forummod_net
+    driver: bridge
+
+volumes:
+  pg_data:
+  es_data:
+  minio_data:
+  kafka_data:
+
+services:
+  kafka:
+    image: apache/kafka:3.9.0
+    container_name: fm_kafka
+    networks: [forummod_net]
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
+    volumes:
+      - kafka_data:/bitnami/kafka
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list"]
+      interval: 10s
+      timeout: 10s
+      retries: 15
+      start_period: 30s
+
+
+  minio:
+    image: minio/minio:latest
+    container_name: fm_minio
+    networks: [forummod_net]
+    command: server /data --console-address ":9001"
+    environment:
+      - MINIO_ROOT_USER=minioadmin
+      - MINIO_ROOT_PASSWORD=minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+
+  postgres:
+    image: postgres:16
+    container_name: fm_postgres
+    networks: [forummod_net]
+    environment:
+      - POSTGRES_DB=moderation
+      - POSTGRES_USER=mod
+      - POSTGRES_PASSWORD=mod
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mod -d moderation"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.1
+    container_name: fm_elasticsearch
+    networks: [forummod_net]
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:9200/_cluster/health | grep -qE '\"status\":\"(green|yellow)\"'"]
+      interval: 10s
+      timeout: 10s
+      retries: 15
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: fm_kafka_ui
+    networks: [forummod_net]
+    environment:
+      - KAFKA_CLUSTERS_0_NAME=local
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
+    ports:
+      - "8085:8080"
+
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    container_name: fm_api
+    networks: [forummod_net]
+    ports:
+      - "8000:8000"
+    environment:
+      - KAFKA_BOOTSTRAP=kafka:9092
+      - MINIO_ENDPOINT=minio:9000
+      - POSTGRES_HOST=postgres
+      - ES_URL=http://elasticsearch:9200
+    depends_on:
+      kafka: { condition: service_healthy }
+      minio: { condition: service_started }
+      postgres: { condition: service_healthy }
+
+  vision:
+    build:
+      context: .
+      dockerfile: services/vision/Dockerfile
+    container_name: fm_vision
+    networks: [forummod_net]
+    environment:
+      - KAFKA_BOOTSTRAP=kafka:9092
+      - MINIO_ENDPOINT=minio:9000
+      - VISION_BACKEND=clip
+      - HF_HOME=/models
+    volumes:
+      - ./models:/models
+    depends_on:
+      kafka: { condition: service_healthy }
+      minio: { condition: service_started }
+
+  text:
+    build:
+      context: .
+      dockerfile: services/text/Dockerfile
+    container_name: fm_text
+    networks: [forummod_net]
+    environment:
+      - KAFKA_BOOTSTRAP=kafka:9092
+      - TEXT_BACKEND=bert
+      - HF_HOME=/models
+    volumes:
+      - ./models:/models
+    depends_on:
+      kafka: { condition: service_healthy }
+
+  fusion:
+    build:
+      context: .
+      dockerfile: services/fusion/Dockerfile
+    container_name: fm_fusion
+    networks: [forummod_net]
+    environment:
+      - KAFKA_BOOTSTRAP=kafka:9092
+      - POLICY=standard
+    depends_on:
+      kafka: { condition: service_healthy }
+
+  indexer:
+    build:
+      context: .
+      dockerfile: services/indexer/Dockerfile
+    container_name: fm_indexer
+    networks: [forummod_net]
+    environment:
+      - KAFKA_BOOTSTRAP=kafka:9092
+      - POSTGRES_HOST=postgres
+      - ES_URL=http://elasticsearch:9200
+    depends_on:
+      kafka: { condition: service_healthy }
+      postgres: { condition: service_healthy }
+      elasticsearch: { condition: service_healthy }

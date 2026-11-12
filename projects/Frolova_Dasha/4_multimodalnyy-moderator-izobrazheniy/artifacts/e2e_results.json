@@ -1,0 +1,217 @@
+{
+  "results": [
+    {
+      "file": "demo_00_violence.jpg",
+      "expected": "violence",
+      "verdict": {
+        "id": 64,
+        "post_id": "ba7240d7-db85-471f-9688-dfc0aee5c612",
+        "decision": "flag",
+        "category": "violence",
+        "scores": {
+          "text_score": 0.9,
+          "vision_score": 0.3254,
+          "text_category": "clean",
+          "vision_category": "violence"
+        },
+        "reasons": [
+          "vision:violence:eff=0.33 thr=0.30"
+        ],
+        "policy": "standard",
+        "trace": [
+          "CrossModalHandler",
+          "ThresholdHandler"
+        ],
+        "created_at": "2026-11-08T14:52:21.416266+00:00"
+      },
+      "ok": true
+    },
+    {
+      "file": "demo_01_weapons.jpg",
+      "expected": "weapons",
+      "verdict": {
+        "id": 65,
+        "post_id": "56183562-5bef-4c6e-8b31-193084574058",
+        "decision": "flag",
+        "category": "weapons",
+        "scores": {
+          "text_score": 0.9,
+          "vision_score": 0.3325,
+          "text_category": "clean",
+          "vision_category": "weapons"
+        },
+        "reasons": [
+          "vision:weapons:eff=0.33 thr=0.30"
+        ],
+        "policy": "standard",
+        "trace": [
+          "CrossModalHandler",
+          "ThresholdHandler"
+        ],
+        "created_at": "2026-11-08T14:52:23.823146+00:00"
+      },
+      "ok": true
+    },
+    {
+      "file": "demo_02_drugs.jpg",
+      "expected": "drugs",
+      "verdict": {
+        "id": 66,
+        "post_id": "a4e88589-d245-4c20-b747-feed0e4760b9",
+        "decision": "flag",
+        "category": "drugs",
+        "scores": {
+          "text_score": 0.9,
+          "vision_score": 0.3321,
+          "text_category": "clean",
+          "vision_category": "drugs"
+        },
+        "reasons": [
+          "vision:drugs:eff=0.33 thr=0.30"
+        ],
+        "policy": "standard",
+        "trace": [
+          "CrossModalHandler",
+          "ThresholdHandler"
+        ],
+        "created_at": "2026-11-08T14:52:25.762451+00:00"
+      },
+      "ok": true
+    },
+    {
+      "file": "demo_03_gambling.jpg",
+      "expected": "gambling",
+      "verdict": {
+        "id": 67,
+        "post_id": "ca061c4c-ae1d-4901-8268-859f8f83dfef",
+        "decision": "flag",
+        "category": "gambling",
+        "scores": {
+          "text_score": 0.85,
+          "vision_score": 0.3333,
+          "text_category": "scam_text",
+          "vision_category": "gambling"
+        },
+        "reasons": [
+          "cross_modal_boost:+0.10 (gambling+scam_text)",
+          "vision:gambling:eff=0.43 thr=0.30"
+        ],
+        "policy": "standard",
+        "trace": [
+          "CrossModalHandler",
+          "ThresholdHandler"
+        ],
+        "created_at": "2026-11-08T14:52:27.914770+00:00"
+      },
+      "ok": true
+    },
+    {
+      "file": "demo_04_scam.jpg",
+      "expected": "scam",
+      "verdict": {
+        "id": 68,
+        "post_id": "1baedb26-c620-46e8-949b-62ae2d74ac23",
+        "decision": "flag",
+        "category": "scam",
+        "scores": {
+          "text_score": 0.98,
+          "vision_score": 0.3333,
+          "text_category": "scam_text",
+          "vision_category": "scam"
+        },
+        "reasons": [
+          "cross_modal_boost:+0.10 (scam+scam_text)",
+          "vision:scam:eff=0.43 thr=0.30"
+        ],
+        "policy": "standard",
+        "trace": [
+          "CrossModalHandler",
+          "ThresholdHandler"
+        ],
+        "created_at": "2026-11-08T14:52:29.917758+00:00"
+      },
+      "ok": true
+    },
+    {
+      "file": "demo_05_spam.jpg",
+      "expected": "spam",
+      "verdict": {
+        "id": 69,
+        "post_id": "ae97f9bc-cb79-47c0-9df8-7d82db064473",
+        "decision": "flag",
+        "category": "spam",
+        "scores": {
+          "text_score": 0.9,
+          "vision_score": 0.3331,
+          "text_category": "clean",
+          "vision_category": "spam"
+        },
+        "reasons": [
+          "vision:spam:eff=0.33 thr=0.30"
+        ],
+        "policy": "standard",
+        "trace": [
+          "CrossModalHandler",
+          "ThresholdHandler"
+        ],
+        "created_at": "2026-11-08T14:52:31.952357+00:00"
+      },
+      "ok": true
+    },
+    {
+      "file": "demo_06_benign_park.jpg",
+      "expected": "benign",
+      "verdict": {
+        "id": 70,
+        "post_id": "f7cbe2ca-12ba-41cd-9de5-989e90bc79ae",
+        "decision": "approve",
+        "category": "benign",
+        "scores": {
+          "text_score": 0.9,
+          "vision_score": 0.2442,
+          "text_category": "clean",
+          "vision_category": "benign"
+        },
+        "reasons": [
+          "default_pass"
+        ],
+        "policy": "standard",
+        "trace": [
+          "CrossModalHandler",
+          "FinalHandler"
+        ],
+        "created_at": "2026-11-08T14:52:34.007856+00:00"
+      },
+      "ok": true
+    },
+    {
+      "file": "demo_07_benign_food.jpg",
+      "expected": "benign",
+      "verdict": {
+        "id": 71,
+        "post_id": "a8dfea12-708c-4f5f-904a-a4aa02066993",
+        "decision": "approve",
+        "category": "benign",
+        "scores": {
+          "text_score": 0.9,
+          "vision_score": 0.2323,
+          "text_category": "clean",
+          "vision_category": "benign"
+        },
+        "reasons": [
+          "default_pass"
+        ],
+        "policy": "standard",
+        "trace": [
+          "CrossModalHandler",
+          "FinalHandler"
+        ],
+        "created_at": "2026-11-08T14:52:36.006593+00:00"
+      },
+      "ok": true
+    }
+  ],
+  "duplicate_ok": true,
+  "es_ok": true,
+  "pass": true
+}

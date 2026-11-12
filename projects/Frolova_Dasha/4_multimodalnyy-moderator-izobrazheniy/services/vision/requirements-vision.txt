@@ -1,0 +1,6 @@
+torch==2.2.1
+transformers==4.38.2
+pillow==10.2.0
+numpy==1.26.4
+confluent-kafka==2.3.0
+minio==7.2.3
