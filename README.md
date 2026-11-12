@@ -3,10 +3,10 @@
 
 # Software Architecture 2025 — проекты студентов
 
-[![progress](https://img.shields.io/badge/progress-14%2F40%20(35%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
+[![progress](https://img.shields.io/badge/progress-15%2F40%20(38%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
 
 🌐 **Сайт с проектами:** https://godor1333.github.io/Software_architecture_2025_API/  
-🕒 Обновлено: 12.11.2026 13:28 (МСК)
+🕒 Обновлено: 12.11.2026 13:29 (МСК)
 
 Курс «Архитектура программного обеспечения», 2025. Здесь собираются проекты студентов:
 у каждого участника 5 проектов, у каждого проекта — своя папка с заданием (`TASK.md`).
@@ -20,11 +20,11 @@
 | [Никита Шарунин](#никита-шарунин) | 0/5 | `░░░░░░░░░░` 0% |
 | [Дима Леонов](#дима-леонов) | 0/5 | `░░░░░░░░░░` 0% |
 | [Лиля Тютерева](#лиля-тютерева) | 0/5 | `░░░░░░░░░░` 0% |
-| [Даша Фролова](#даша-фролова) | 4/5 | `████████░░` 80% |
+| [Даша Фролова](#даша-фролова) | 5/5 | `██████████` 100% |
 | [Денис Сивогривов](#денис-сивогривов) | 0/5 | `░░░░░░░░░░` 0% |
 | [Артём Царьков](#артём-царьков) | 0/5 | `░░░░░░░░░░` 0% |
 | [Денис Куравин](#денис-куравин) | 5/5 | `██████████` 100% |
-| **Всего** | **14/40** | `████░░░░░░` 35% |
+| **Всего** | **15/40** | `████░░░░░░` 38% |
 
 ## Проекты
 
@@ -70,13 +70,13 @@
 
 ### Даша Фролова
 
-Папка: [`projects/Frolova_Dasha/`](projects/Frolova_Dasha) · сдано **4/5**
+Папка: [`projects/Frolova_Dasha/`](projects/Frolova_Dasha) · сдано **5/5**
 
 - [x] **1. Антифрод билетов на концерты** — [📁 папка](projects/Frolova_Dasha/1_antifrod-biletov-na-kontserty) · [PR #1](https://github.com/godor1333/Software_architecture_2025_API/pull/1) · @daralova · принят 24.10.2026
 - [x] **2. Сегментация дорожной сцены для беспилотника** — [📁 папка](projects/Frolova_Dasha/2_segmentatsiya-dorozhnoy-stseny-dlya) · [PR #11](https://github.com/godor1333/Software_architecture_2025_API/pull/11) · @daralova · принят 02.11.2026
 - [x] **3. Анализ отзывов пациентов о клиниках** — [📁 папка](projects/Frolova_Dasha/3_analiz-otzyvov-patsientov-o-klinikakh) · [PR #13](https://github.com/godor1333/Software_architecture_2025_API/pull/13) · @daralova · принят 02.11.2026
 - [x] **4. Мультимодальный модератор изображений форумов** — [📁 папка](projects/Frolova_Dasha/4_multimodalnyy-moderator-izobrazheniy) · [PR #15](https://github.com/godor1333/Software_architecture_2025_API/pull/15) · @daralova · принят 12.11.2026
-- [ ] **5. RL-агент для Pong/Breakout** — [📁 папка](projects/Frolova_Dasha/5_rl-agent-dlya-pong-breakout)
+- [x] **5. RL-агент для Pong/Breakout** — [📁 папка](projects/Frolova_Dasha/5_rl-agent-dlya-pong-breakout) · [PR #16](https://github.com/godor1333/Software_architecture_2025_API/pull/16) · @daralova · принят 12.11.2026
 
 ### Денис Сивогривов
 
