@@ -3,8 +3,8 @@
   "repo": "godor1333/Software_architecture_2025_API",
   "repo_url": "https://github.com/godor1333/Software_architecture_2025_API",
   "site_url": "https://godor1333.github.io/Software_architecture_2025_API/",
-  "updated_at": "2026-11-12T13:29:09+03:00",
-  "done": 15,
+  "updated_at": "2026-11-19T15:00:33+03:00",
+  "done": 16,
   "total": 40,
   "report_checklist": [
     "Цель и проблема проекта",
@@ -1142,7 +1142,7 @@
       "name": "Артём Царьков",
       "slug": "Tsarkov_Artem",
       "path": "projects/Tsarkov_Artem",
-      "done": 0,
+      "done": 1,
       "total": 5,
       "projects": [
         {
@@ -1170,13 +1170,13 @@
           ],
           "path": "projects/Tsarkov_Artem/1_antifrod-vozvratov-v-e-commerce",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Tsarkov_Artem/1_antifrod-vozvratov-v-e-commerce",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 61,
+          "submitted_at": "2026-11-19T12:00:13Z",
+          "pr": 18,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/18",
+          "by": "nesssleh",
+          "by_login": true
         },
         {
           "n": 2,

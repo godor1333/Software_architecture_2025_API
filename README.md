@@ -3,10 +3,10 @@
 
 # Software Architecture 2025 — проекты студентов
 
-[![progress](https://img.shields.io/badge/progress-15%2F40%20(38%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
+[![progress](https://img.shields.io/badge/progress-16%2F40%20(40%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
 
 🌐 **Сайт с проектами:** https://godor1333.github.io/Software_architecture_2025_API/  
-🕒 Обновлено: 12.11.2026 13:29 (МСК)
+🕒 Обновлено: 19.11.2026 15:00 (МСК)
 
 Курс «Архитектура программного обеспечения», 2025. Здесь собираются проекты студентов:
 у каждого участника 5 проектов, у каждого проекта — своя папка с заданием (`TASK.md`).
@@ -22,9 +22,9 @@
 | [Лиля Тютерева](#лиля-тютерева) | 0/5 | `░░░░░░░░░░` 0% |
 | [Даша Фролова](#даша-фролова) | 5/5 | `██████████` 100% |
 | [Денис Сивогривов](#денис-сивогривов) | 0/5 | `░░░░░░░░░░` 0% |
-| [Артём Царьков](#артём-царьков) | 0/5 | `░░░░░░░░░░` 0% |
+| [Артём Царьков](#артём-царьков) | 1/5 | `██░░░░░░░░` 20% |
 | [Денис Куравин](#денис-куравин) | 5/5 | `██████████` 100% |
-| **Всего** | **15/40** | `████░░░░░░` 38% |
+| **Всего** | **16/40** | `████░░░░░░` 40% |
 
 ## Проекты
 
@@ -90,9 +90,9 @@
 
 ### Артём Царьков
 
-Папка: [`projects/Tsarkov_Artem/`](projects/Tsarkov_Artem) · сдано **0/5**
+Папка: [`projects/Tsarkov_Artem/`](projects/Tsarkov_Artem) · сдано **1/5**
 
-- [ ] **1. Антифрод возвратов в e-commerce** — [📁 папка](projects/Tsarkov_Artem/1_antifrod-vozvratov-v-e-commerce)
+- [x] **1. Антифрод возвратов в e-commerce** — [📁 папка](projects/Tsarkov_Artem/1_antifrod-vozvratov-v-e-commerce) · [PR #18](https://github.com/godor1333/Software_architecture_2025_API/pull/18) · @nesssleh · принят 19.11.2026
 - [ ] **2. Сегментация спутниковых снимков** — [📁 папка](projects/Tsarkov_Artem/2_segmentatsiya-sputnikovykh-snimkov)
 - [ ] **3. LLM-анализ резюме и вакансий** — [📁 папка](projects/Tsarkov_Artem/3_llm-analiz-rezyume-i-vakansiy)
 - [ ] **4. Классификация обращений в службу поддержки** — [📁 папка](projects/Tsarkov_Artem/4_klassifikatsiya-obrashcheniy-v-sluzhbu)
