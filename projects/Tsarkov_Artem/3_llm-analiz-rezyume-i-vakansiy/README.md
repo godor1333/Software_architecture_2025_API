@@ -75,3 +75,34 @@ powershell -ExecutionPolicy Bypass -File scripts\demo.ps1 -SkipBuild  # Linux/ma
 
 Царьков Артём — проект выполнен индивидуально (архитектура, код, обучение моделей, тесты, отчёт).
 Отчёт по проекту (Word/PDF) — в папке [`report/`](report/).
+
+## Данные и демонстрация анализа
+
+[600 резюме](dataset/resumes.jsonl) · [60 вакансий](dataset/vacancies.jsonl) · [Полный результат прогона Qwen](docs/demo/inference.json) · [Скрипт запуска](scripts/show_inference.py)
+
+### Загрузка тех же документов через API
+
+После запуска сервиса на порту 8000 выполните из корня проекта:
+
+```python
+import json
+from pathlib import Path
+import httpx
+
+with httpx.Client(base_url="http://localhost:8000", timeout=240) as api:
+    ids = {}
+    for kind, name, index in [("resume", "resumes", 6), ("vacancy", "vacancies", 0)]:
+        rows = Path(f"dataset/{name}.jsonl").read_text(encoding="utf-8").splitlines()
+        row = json.loads(rows[index])
+        response = api.post("/v1/documents/upload", data={"type": kind},
+                            files={"file": (row["id"] + ".txt", row["text"].encode("utf-8"), "text/plain")})
+        response.raise_for_status()
+        document = response.json()
+        ids[kind + "_id"] = document["id"]
+        print(document["title"], document["skills"])
+    result = api.post("/v1/match", json={**ids, "explain": True})
+    result.raise_for_status()
+    print(result.json())
+```
+
+Ответ зависит от модели и эмбеддера запущенного API. Конфигурация сохранённого локального прогона указана в отчёте.
