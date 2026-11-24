@@ -71,3 +71,7 @@ powershell -ExecutionPolicy Bypass -File scripts\demo.ps1 -SkipBuild  # Linux/ma
 
 Царьков Артём — проект выполнен индивидуально (архитектура, код, обучение моделей, тесты, отчёт).
 Отчёт по проекту (Word/PDF) — в папке [`report/`](report/).
+
+## Снимки Grafana
+
+[Поток по командам](docs/img/grafana_teams.png) · [Правила маршрутизации](docs/img/grafana_rules.png) · [Приоритеты](docs/img/grafana_priorities.png)
