@@ -3,10 +3,10 @@
 
 # Software Architecture 2025 — проекты студентов
 
-[![progress](https://img.shields.io/badge/progress-18%2F40%20(45%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
+[![progress](https://img.shields.io/badge/progress-20%2F40%20(50%25)-blue)](https://godor1333.github.io/Software_architecture_2025_API/) 
 
 🌐 **Сайт с проектами:** https://godor1333.github.io/Software_architecture_2025_API/  
-🕒 Обновлено: 26.11.2026 15:28 (МСК)
+🕒 Обновлено: 26.11.2026 15:29 (МСК)
 
 Курс «Архитектура программного обеспечения», 2025. Здесь собираются проекты студентов:
 у каждого участника 5 проектов, у каждого проекта — своя папка с заданием (`TASK.md`).
@@ -22,9 +22,9 @@
 | [Лиля Тютерева](#лиля-тютерева) | 0/5 | `░░░░░░░░░░` 0% |
 | [Даша Фролова](#даша-фролова) | 5/5 | `██████████` 100% |
 | [Денис Сивогривов](#денис-сивогривов) | 0/5 | `░░░░░░░░░░` 0% |
-| [Артём Царьков](#артём-царьков) | 3/5 | `██████░░░░` 60% |
+| [Артём Царьков](#артём-царьков) | 5/5 | `██████████` 100% |
 | [Денис Куравин](#денис-куравин) | 5/5 | `██████████` 100% |
-| **Всего** | **18/40** | `████░░░░░░` 45% |
+| **Всего** | **20/40** | `█████░░░░░` 50% |
 
 ## Проекты
 
@@ -90,12 +90,12 @@
 
 ### Артём Царьков
 
-Папка: [`projects/Tsarkov_Artem/`](projects/Tsarkov_Artem) · сдано **3/5**
+Папка: [`projects/Tsarkov_Artem/`](projects/Tsarkov_Artem) · сдано **5/5**
 
 - [x] **1. Антифрод возвратов в e-commerce** — [📁 папка](projects/Tsarkov_Artem/1_antifrod-vozvratov-v-e-commerce) · [PR #18](https://github.com/godor1333/Software_architecture_2025_API/pull/18) · @nesssleh · принят 19.11.2026
 - [x] **2. Сегментация спутниковых снимков** — [📁 папка](projects/Tsarkov_Artem/2_segmentatsiya-sputnikovykh-snimkov) · [PR #19](https://github.com/godor1333/Software_architecture_2025_API/pull/19) · @nesssleh · принят 26.11.2026
-- [ ] **3. LLM-анализ резюме и вакансий** — [📁 папка](projects/Tsarkov_Artem/3_llm-analiz-rezyume-i-vakansiy)
-- [ ] **4. Классификация обращений в службу поддержки** — [📁 папка](projects/Tsarkov_Artem/4_klassifikatsiya-obrashcheniy-v-sluzhbu)
+- [x] **3. LLM-анализ резюме и вакансий** — [📁 папка](projects/Tsarkov_Artem/3_llm-analiz-rezyume-i-vakansiy) · [PR #20](https://github.com/godor1333/Software_architecture_2025_API/pull/20) · @nesssleh · принят 26.11.2026
+- [x] **4. Классификация обращений в службу поддержки** — [📁 папка](projects/Tsarkov_Artem/4_klassifikatsiya-obrashcheniy-v-sluzhbu) · [PR #21](https://github.com/godor1333/Software_architecture_2025_API/pull/21) · @nesssleh · принят 26.11.2026
 - [x] **5. RL для игры с боевым дроном в 2D** — [📁 папка](projects/Tsarkov_Artem/5_rl-dlya-igry-s-boevym-dronom-v-2d) · [PR #22](https://github.com/godor1333/Software_architecture_2025_API/pull/22) · @nesssleh · принят 19.11.2026
 
 ### Денис Куравин

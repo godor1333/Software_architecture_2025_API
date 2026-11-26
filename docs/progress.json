@@ -3,8 +3,8 @@
   "repo": "godor1333/Software_architecture_2025_API",
   "repo_url": "https://github.com/godor1333/Software_architecture_2025_API",
   "site_url": "https://godor1333.github.io/Software_architecture_2025_API/",
-  "updated_at": "2026-11-26T15:28:59+03:00",
-  "done": 18,
+  "updated_at": "2026-11-26T15:29:43+03:00",
+  "done": 20,
   "total": 40,
   "report_checklist": [
     "Цель и проблема проекта",
@@ -1142,7 +1142,7 @@
       "name": "Артём Царьков",
       "slug": "Tsarkov_Artem",
       "path": "projects/Tsarkov_Artem",
-      "done": 3,
+      "done": 5,
       "total": 5,
       "projects": [
         {
@@ -1236,13 +1236,13 @@
           ],
           "path": "projects/Tsarkov_Artem/3_llm-analiz-rezyume-i-vakansiy",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Tsarkov_Artem/3_llm-analiz-rezyume-i-vakansiy",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 59,
+          "submitted_at": "2026-11-26T12:28:57Z",
+          "pr": 20,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/20",
+          "by": "nesssleh",
+          "by_login": true
         },
         {
           "n": 4,
@@ -1269,13 +1269,13 @@
           ],
           "path": "projects/Tsarkov_Artem/4_klassifikatsiya-obrashcheniy-v-sluzhbu",
           "url": "https://github.com/godor1333/Software_architecture_2025_API/tree/main/projects/Tsarkov_Artem/4_klassifikatsiya-obrashcheniy-v-sluzhbu",
-          "done": false,
-          "files": 0,
-          "submitted_at": "",
-          "pr": null,
-          "pr_url": "",
-          "by": "",
-          "by_login": false
+          "done": true,
+          "files": 61,
+          "submitted_at": "2026-11-26T12:29:16Z",
+          "pr": 21,
+          "pr_url": "https://github.com/godor1333/Software_architecture_2025_API/pull/21",
+          "by": "nesssleh",
+          "by_login": true
         },
         {
           "n": 5,
