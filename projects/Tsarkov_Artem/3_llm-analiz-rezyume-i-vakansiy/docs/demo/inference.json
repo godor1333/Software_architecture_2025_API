@@ -1,0 +1,284 @@
+{
+  "model": "Qwen2.5-0.5B-Instruct",
+  "embedder": "tfidf-char",
+  "documents": [
+    {
+      "id": "res-0006",
+      "type": "resume",
+      "title": "Python Backend Developer",
+      "status": "processed",
+      "skills": [
+        {
+          "name": "Apache Kafka",
+          "category": "streaming",
+          "evidence": "Знаком с Apache Kafka.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "FastAPI",
+          "category": "backend",
+          "evidence": "Уверенно владею FastAPI.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "Git",
+          "category": "devops",
+          "evidence": "Стек: Git.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "Java",
+          "category": "language",
+          "evidence": "Опыт работы с java se.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "Microservices",
+          "category": "architecture",
+          "evidence": "распиливал монолит на независимые сервисы с отдельными базами.",
+          "method": "semantic",
+          "confidence": 0.691
+        },
+        {
+          "name": "REST API",
+          "category": "backend",
+          "evidence": "проектировал HTTP-эндпоинты с OpenAPI-спецификацией.",
+          "method": "semantic",
+          "confidence": 0.746
+        },
+        {
+          "name": "Redis",
+          "category": "database",
+          "evidence": "Писал сервисы с применением Redis.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        }
+      ],
+      "must_have": [],
+      "nice_to_have": [],
+      "text": "Резюме. Желаемая должность: Python Backend Developer. Стек: Git. Опыт работы с java se. проектировал HTTP-эндпоинты с OpenAPI-спецификацией. Знаком с Apache Kafka. Уверенно владею FastAPI. распиливал монолит на независимые сервисы с отдельными базами. упаковывал сервисы в образы и описывал окружение через compose-файлы. Писал сервисы с применением Redis. Ответственный, быстро обучаюсь. Интересуюсь новыми технологиями.",
+      "embedding_size": 4060
+    },
+    {
+      "id": "vac-000",
+      "type": "vacancy",
+      "title": "Python Backend Developer",
+      "status": "processed",
+      "skills": [
+        {
+          "name": "Apache Kafka",
+          "category": "streaming",
+          "evidence": "Плюсом будет опыт с Apache Kafka.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "Django",
+          "category": "backend",
+          "evidence": "Плюсом будет опыт с Django.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "Docker",
+          "category": "devops",
+          "evidence": "Обязательно знание контейнеризация.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "FastAPI",
+          "category": "backend",
+          "evidence": "Требуется опыт с FastAPI.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "Git",
+          "category": "devops",
+          "evidence": "Обязательно знание gitlab.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "Microservices",
+          "category": "architecture",
+          "evidence": "Будет плюсом: Microservices.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "PostgreSQL",
+          "category": "database",
+          "evidence": "Ожидаем уверенное владение постгрес.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "Python",
+          "category": "language",
+          "evidence": "Опыт работы с питон от 2 лет.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "REST API",
+          "category": "backend",
+          "evidence": "Обязательно знание rest.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        },
+        {
+          "name": "Redis",
+          "category": "database",
+          "evidence": "Плюсом будет опыт с Redis.",
+          "method": "gazetteer",
+          "confidence": 1.0
+        }
+      ],
+      "must_have": [
+        "Docker",
+        "FastAPI",
+        "Git",
+        "PostgreSQL",
+        "Python",
+        "REST API"
+      ],
+      "nice_to_have": [
+        "Apache Kafka",
+        "Django",
+        "Microservices",
+        "Redis"
+      ],
+      "text": "Вакансия: Python Backend Developer. Опыт работы с питон от 2 лет. Требуется опыт с FastAPI. Ожидаем уверенное владение постгрес. Обязательно знание контейнеризация. Обязательно знание rest. Обязательно знание gitlab. Плюсом будет опыт с Redis. Плюсом будет опыт с Apache Kafka. Плюсом будет опыт с Django. Будет плюсом: Microservices. ДМС и обучение за счёт компании.",
+      "embedding_size": 4060
+    }
+  ],
+  "model_calls": [
+    {
+      "input": "Стек: Git. Опыт работы с java se. проектировал HTTP-эндпоинты с OpenAPI-спецификацией. Знаком с Apache Kafka. Уверенно владею FastAPI. распиливал монолит на независимые сервисы с отдельными базами. упаковывал сервисы в образы и описывал окружение через compose-файлы. Писал сервисы с применением Redis. Ответственный, быстро обучаюсь. Интересуюсь новыми технологиями.",
+      "raw_output": "{\n  \"skills\": [\n    {\n      \"name\": \"Git\",\n      \"evidence\": \"Уверенно владею Git для управления проектами и кодированием.\"\n    },\n    {\n      \"name\": \"Java SE\",\n      \"evidence\": \"Проектировал HTTP-эндпоинты с OpenAPI-спецификацией.\"\n    },\n    {\n      \"name\": \"Apache Kafka\",\n      \"evidence\": \"Уверенно владею FastAPI для распиливания монолитных сервисов.\"\n    },\n    {\n      \"name\": \"FastAPI\",\n      \"evidence\": \"Распиливал монолит на независимые сервисы с отдельными базами.\"\n    },\n    {\n      \"name\": \"Redis\",\n      \"evidence\": \"Упаковывал сервисы в образы и описывал окружение через compose-файлы.\"\n    },\n    {\n      \"name\": \"Redis\",\n      \"evidence\": \"Писал сервисы с применением Redis.\"\n    },\n    {\n      \"name\": \"Git\",\n      \"evidence\": \"Ответственный, быстро обучаюсь.\"\n    }\n  ]\n}"
+    },
+    {
+      "input": "Опыт работы с питон от 2 лет. Требуется опыт с FastAPI. Ожидаем уверенное владение постгрес. Обязательно знание контейнеризация. Обязательно знание rest. Обязательно знание gitlab. Плюсом будет опыт с Redis. Плюсом будет опыт с Apache Kafka. Плюсом будет опыт с Django. Будет плюсом: Microservices. ДМС и обучение за счёт компании.",
+      "raw_output": "{\"skills\": [{\"name\": \"FastAPI\", \"evidence\": \"FastAPI - это популярный框架 для создания REST API.\"}, {\"name\": \"GitLab\", \"evidence\": \"GitLab - это инструмент для управления проектами и управления репозиториями.\"}, {\"name\": \"Redis\", \"evidence\": \"Redis - это библиотека для хранения данных в виде словарей.\"}, {\"name\": \"Apache Kafka\", \"evidence\": \"Apache Kafka - это инструмент для создания и управления кластерами данных.\"}, {\"name\": \"Django\", \"evidence\": \"Django - это популярный框架 для создания web-приложений.\"}, {\"name\": \"Microservices\", \"evidence\": \"Microservices - это подход к разработке приложений, где приложение разделяется на разные службы.\"}, {\"name\": \"Apache Kafka\", \"evidence\": \"Apache Kafka - это инструмент для создания и управления кластерами данных.\"}]}"
+    },
+    {
+      "input": "{\"vacancy\": \"Python Backend Developer\", \"score\": 0.69, \"must_coverage\": 0.7, \"exact\": [\"FastAPI\", \"Git\", \"REST API\", \"Apache Kafka\", \"Microservices\", \"Redis\"], \"partial\": [\"Docker (есть Microservices)\", \"Python (есть Java)\", \"Django (есть FastAPI)\"], \"missing_must\": [\"PostgreSQL\"], \"missing_nice\": []}",
+      "raw_output": "{\"verdict\": \"подходит\", \"summary\": \"2-3 предложения\", \"recommendations\": [\"Python Backend Developer\", \"FastAPI\", \"Git\", \"REST API\", \"Apache Kafka\", \"Microservices\", \"Redis\", \"Docker (есть Microservices)\", \"Python (есть Java)\", \"Django (есть FastAPI)\"]}"
+    }
+  ],
+  "match": {
+    "resume_id": "res-0006",
+    "vacancy_id": "vac-000",
+    "score": 0.6932,
+    "must_coverage": 0.7,
+    "nice_coverage": 0.9,
+    "doc_similarity": 0.272,
+    "missing_must": [
+      "PostgreSQL"
+    ],
+    "matches": [
+      {
+        "requirement": "Docker",
+        "matched_by": "Microservices",
+        "kind": "related",
+        "score": 0.6
+      },
+      {
+        "requirement": "FastAPI",
+        "matched_by": "FastAPI",
+        "kind": "exact",
+        "score": 1.0
+      },
+      {
+        "requirement": "Git",
+        "matched_by": "Git",
+        "kind": "exact",
+        "score": 1.0
+      },
+      {
+        "requirement": "PostgreSQL",
+        "matched_by": null,
+        "kind": "missing",
+        "score": 0.0
+      },
+      {
+        "requirement": "Python",
+        "matched_by": "Java",
+        "kind": "related",
+        "score": 0.6
+      },
+      {
+        "requirement": "REST API",
+        "matched_by": "REST API",
+        "kind": "exact",
+        "score": 1.0
+      },
+      {
+        "requirement": "Apache Kafka",
+        "matched_by": "Apache Kafka",
+        "kind": "exact",
+        "score": 1.0
+      },
+      {
+        "requirement": "Django",
+        "matched_by": "FastAPI",
+        "kind": "related",
+        "score": 0.6
+      },
+      {
+        "requirement": "Microservices",
+        "matched_by": "Microservices",
+        "kind": "exact",
+        "score": 1.0
+      },
+      {
+        "requirement": "Redis",
+        "matched_by": "Redis",
+        "kind": "exact",
+        "score": 1.0
+      }
+    ],
+    "explanation": {
+      "verdict": "подходит",
+      "summary": "2-3 предложения",
+      "recommendations": [
+        "Python Backend Developer",
+        "FastAPI",
+        "Git",
+        "REST API",
+        "Apache Kafka",
+        "Microservices",
+        "Redis",
+        "Docker (есть Microservices)",
+        "Python (есть Java)",
+        "Django (есть FastAPI)"
+      ],
+      "facts": {
+        "exact": [
+          "FastAPI",
+          "Git",
+          "REST API",
+          "Apache Kafka",
+          "Microservices",
+          "Redis"
+        ],
+        "partial": [
+          "Docker (есть Microservices)",
+          "Python (есть Java)",
+          "Django (есть FastAPI)"
+        ],
+        "missing_must": [
+          "PostgreSQL"
+        ],
+        "missing_nice": []
+      },
+      "explainer": "llm"
+    }
+  }
+}
